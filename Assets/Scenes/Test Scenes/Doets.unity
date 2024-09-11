@@ -188,7 +188,19 @@ MonoBehaviour:
     m_ActionId: 5a371fb7-6cde-4da7-9c48-e0e82dd3e712
     m_ActionName: Bunny/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1056767751}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 7c6a377a-37df-43d0-9f25-995789078c80
     m_ActionName: Bunny/Sprint[/Keyboard/shift]
   - m_PersistentCalls:
@@ -617,7 +629,7 @@ GameObject:
   - component: {fileID: 1369900082}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353587486906732237, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3353587486906732237, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -865,6 +877,18 @@ PrefabInstance:
     - target: {fileID: 3353587486906732237, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285159584249322480, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
+      propertyPath: moveSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285159584249322480, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
+      propertyPath: sprintspeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285159584249322480, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
+      propertyPath: currentSpeed
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,8 +12,8 @@ public class Movement : MonoBehaviour
     public Rigidbody rb;
     public Camera camHolder;
 
-    float  normalSpeed, maxSpeed;
-    public float jumpForce, sensitivity, moveSpeed;
+  
+    public float jumpForce, sensitivity, moveSpeed, sprintspeed, currentSpeed;
     float maxJumpForce;
 
     public Vector3 forceDirection;
@@ -35,8 +35,7 @@ public class Movement : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-      // moveSpeed = normalSpeed;
+       
     }
 
     private void OnEnable()
@@ -54,16 +53,6 @@ public class Movement : MonoBehaviour
         rotate.Disable();
     }
 
-    public void DoJump(InputAction.CallbackContext context)
-    {
-        if (isGrounded && context.performed)
-        {
-             //movementAnimator.SetTrigger("Jumping");
-            jumping = true;
-            isGrounded = false;
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-        }
-    }
 
     private void Update()
     {
@@ -71,8 +60,8 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        forceDirection += move.ReadValue<Vector2>().x * GetCameraRight(camHolder) * moveSpeed;
-        forceDirection += move.ReadValue<Vector2>().y * GetCameraForward(camHolder) * moveSpeed;
+        forceDirection += move.ReadValue<Vector2>().x * GetCameraRight(camHolder) * currentSpeed;
+        forceDirection += move.ReadValue<Vector2>().y * GetCameraForward(camHolder) * currentSpeed;
 
         rb.AddForce(forceDirection, ForceMode.Impulse);
         forceDirection = Vector3.zero;
@@ -83,7 +72,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.1f))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.2f))
         {
             if (hit.transform.tag != "Jumpable")
             {
@@ -103,8 +92,6 @@ public class Movement : MonoBehaviour
         //animations
         /*float actualSpeed = new Vector3(rb.velocity.x, rb.velocity.z, 0).magnitude;
         movementAnimator.SetFloat("Actual Speed", actualSpeed);*/
-
-       
     }
 
     private Vector3 GetCameraForward(Camera cam)
@@ -131,6 +118,32 @@ public class Movement : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(0, x, 0 * Time.deltaTime);
         camHolder.transform.localRotation = Quaternion.Euler(y, 0, 0 * Time.deltaTime);
+    }
+    public void DoJump(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            if (isGrounded)
+            {
+                Debug.Log("JUMP");
+                 //movementAnimator.SetTrigger("Jumping");
+                jumping = true;
+                isGrounded = false;
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            }
+
+        }
+    }
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (context.performed && isGrounded)
+        {
+            currentSpeed = moveSpeed + sprintspeed;
+        }
+        else
+        {
+            currentSpeed = moveSpeed;
+        }
     }
 
 
