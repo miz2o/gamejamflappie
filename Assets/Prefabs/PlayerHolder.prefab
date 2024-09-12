@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 220403287990679487}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.46, z: 0.38}
+  m_LocalPosition: {x: -0.02, y: 0.46, z: 0.313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,7 +169,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -206,12 +206,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3353587486906732237}
-  - component: {fileID: 6285159584249322480}
   - component: {fileID: 798422710117832112}
   - component: {fileID: 2454830594057967792}
+  - component: {fileID: 6285159584249322480}
+  - component: {fileID: 1023655490283571154}
   m_Layer: 0
   m_Name: PlayerHolder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,27 +234,6 @@ Transform:
   - {fileID: 4339662955551692932}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6285159584249322480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2917204513454898645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b0a065abb4fff4abdbdc4ccfd99374, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 798422710117832112}
-  camHolder: {fileID: 5772253712144945496}
-  jumpForce: 10
-  sensitivity: 0.4
-  moveSpeed: 0.5
-  forceDirection: {x: 1, y: 1, z: 1}
-  jump: {x: 1, y: 1, z: 1}
-  isGrounded: 0
-  jumping: 0
 --- !u!54 &798422710117832112
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -304,6 +284,43 @@ CapsuleCollider:
   m_Height: 1.2
   m_Direction: 1
   m_Center: {x: 0, y: 0.58, z: 0}
+--- !u!114 &6285159584249322480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917204513454898645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b0a065abb4fff4abdbdc4ccfd99374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 798422710117832112}
+  camHolder: {fileID: 5772253712144945496}
+  jumpForce: 10
+  sensitivity: 0.4
+  moveSpeed: 0.8
+  sprintspeed: 1
+  currentSpeed: 0.8
+  forceDirection: {x: 1, y: 1, z: 1}
+  jump: {x: 1, y: 1, z: 1}
+  isGrounded: 0
+  jumping: 0
+--- !u!114 &1023655490283571154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917204513454898645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff5be0fc9e5e784983c9c24d43f0d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
 --- !u!1 &4042483027890580148
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +333,7 @@ GameObject:
   - component: {fileID: 9203588316333084806}
   m_Layer: 0
   m_Name: Wallcollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
