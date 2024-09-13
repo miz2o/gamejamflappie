@@ -6,33 +6,54 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public float gameTimer;
-    public float points, highscore;
+    public static float points, highScore;
 
-    public TextMeshProUGUI timer;
+    public TextMeshProUGUI timer, pointUi, timeUpPoints;
+    public GameObject timeUpScreen;
 
-    public bool timerOn, gameOver;
+    public bool timerOn;
+    public static bool gameOver;
+    private void Start()
+    {
+        points = 0;
+    }
+
     private void Update()
     {
         timer.text = gameTimer.ToString("F2");
         if (timerOn)
         {
             gameTimer -= Time.deltaTime;
+            if (gameTimer < 0)
+            {
+            
+                timerOn = false;
+                gameOver = true;
+
+                timeUpScreen.SetActive(true);
+                
+
+                timeUpPoints.text = ("Your score:" + points);
+                //time over screen with points
+                //do things
+            }
         }
 
-        if (gameTimer < 0)
-        {
-            timerOn = false;
-            gameOver = true;
-            //do things
-        }
     }
     public void AddPoints(float pointsEarned)
     {
         points = +pointsEarned;
+
+        if (points > highScore)
+        {
+            SetHighscore();
+        }
     }
 
     public void SetHighscore()
     {
         //set new highscore whoooo
+        highScore = points;
+        PlayerPrefs.SetFloat("highScore", highScore);
     }
 }

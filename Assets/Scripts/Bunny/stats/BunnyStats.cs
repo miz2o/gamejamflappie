@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BunnyStats : MonoBehaviour
 {
     public float health, maxHealth;
-
-
+    public TextMeshProUGUI pointsEarned;
+    public GameObject deathPanel;
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -18,7 +19,9 @@ public class BunnyStats : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("You're dead... What a skill issue");
+        deathPanel.SetActive(true);
+        pointsEarned.text = ("Your score:" + Score.points);
+        //gameOver screen with point overview
         //stuff when dead
     }
 }

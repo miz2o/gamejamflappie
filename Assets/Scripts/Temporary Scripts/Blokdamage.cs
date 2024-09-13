@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Blokdamage : MonoBehaviour
 {
+    
 
     public float damageAmmount = 10;
     private void OnCollisionEnter(Collision collision)
