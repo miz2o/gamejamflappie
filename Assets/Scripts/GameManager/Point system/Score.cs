@@ -6,7 +6,8 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public float gameTimer;
-    public static float points, highScore;
+    public static float  highScore;
+    public int points;
 
     public TextMeshProUGUI timer, pointUi, timeUpPoints;
     public GameObject timeUpScreen;
@@ -40,7 +41,7 @@ public class Score : MonoBehaviour
         }
 
     }
-    public void AddPoints(float pointsEarned)
+    public void AddPoints(int pointsEarned)
     {
         points = +pointsEarned;
 
