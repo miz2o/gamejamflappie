@@ -791,6 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: 0
+  points: 0
   timer: {fileID: 654507483}
   pointUi: {fileID: 1863385276}
   timeUpPoints: {fileID: 5683338636668142618}
@@ -920,14 +921,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1023655490283571154, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
-      propertyPath: deathPanel
-      value: 
-      objectReference: {fileID: 5683338636668142619}
-    - target: {fileID: 1023655490283571154, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
-      propertyPath: pointsEarned
-      value: 
-      objectReference: {fileID: 5683338636668142617}
     - target: {fileID: 2917204513454898645, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_Name
       value: PlayerHolder
@@ -938,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353587486906732237, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3353587486906732237, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -985,6 +978,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1111843668231687380, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.312988
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111843668231687380, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.5355988
+      objectReference: {fileID: 0}
     - target: {fileID: 4148202714272292209, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1082,17 +1083,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
---- !u!114 &5683338636668142617 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3437977142576664048, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
-  m_PrefabInstance: {fileID: 5683338636668142616}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5683338636668142618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 881419916442709011, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
@@ -1104,11 +1094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5683338636668142619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7103812751084262048, guid: 69113e10d94767f40bcb6a4499a48f4b, type: 3}
-  m_PrefabInstance: {fileID: 5683338636668142616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
