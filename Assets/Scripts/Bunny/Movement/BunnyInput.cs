@@ -56,18 +56,27 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Shoot"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""e3b37734-a855-4c94-8daa-9882678a80c1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Mouse"",
                     ""type"": ""PassThrough"",
                     ""id"": ""61d751a5-c54a-4008-bef0-aed859bd0cd6"",
                     ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5dde2c4-5166-4da9-9d72-182b122e0420"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -143,8 +152,8 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""00dd2217-5b62-4a68-82aa-1c4bb78c9883"",
-                    ""path"": """",
-                    ""interactions"": """",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press(pressPoint=0.5)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
@@ -172,6 +181,17 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
                     ""action"": ""Mouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9edd7abb-d359-49cf-b1de-2c4675c17c7a"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         m_Bunny_Sprint = m_Bunny.FindAction("Sprint", throwIfNotFound: true);
         m_Bunny_Shoot = m_Bunny.FindAction("Shoot", throwIfNotFound: true);
         m_Bunny_Mouse = m_Bunny.FindAction("Mouse", throwIfNotFound: true);
+        m_Bunny_Reload = m_Bunny.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Bunny_Sprint;
     private readonly InputAction m_Bunny_Shoot;
     private readonly InputAction m_Bunny_Mouse;
+    private readonly InputAction m_Bunny_Reload;
     public struct BunnyActions
     {
         private @BunnyInput m_Wrapper;
@@ -260,6 +282,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Bunny_Sprint;
         public InputAction @Shoot => m_Wrapper.m_Bunny_Shoot;
         public InputAction @Mouse => m_Wrapper.m_Bunny_Mouse;
+        public InputAction @Reload => m_Wrapper.m_Bunny_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Bunny; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +307,9 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
             @Mouse.started += instance.OnMouse;
             @Mouse.performed += instance.OnMouse;
             @Mouse.canceled += instance.OnMouse;
+            @Reload.started += instance.OnReload;
+            @Reload.performed += instance.OnReload;
+            @Reload.canceled += instance.OnReload;
         }
 
         private void UnregisterCallbacks(IBunnyActions instance)
@@ -303,6 +329,9 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
             @Mouse.started -= instance.OnMouse;
             @Mouse.performed -= instance.OnMouse;
             @Mouse.canceled -= instance.OnMouse;
+            @Reload.started -= instance.OnReload;
+            @Reload.performed -= instance.OnReload;
+            @Reload.canceled -= instance.OnReload;
         }
 
         public void RemoveCallbacks(IBunnyActions instance)
@@ -327,5 +356,6 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

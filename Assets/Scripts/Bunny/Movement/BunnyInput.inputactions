@@ -34,18 +34,27 @@
                 },
                 {
                     "name": "Shoot",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e3b37734-a855-4c94-8daa-9882678a80c1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Mouse",
                     "type": "PassThrough",
                     "id": "61d751a5-c54a-4008-bef0-aed859bd0cd6",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "d5dde2c4-5166-4da9-9d72-182b122e0420",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -121,8 +130,8 @@
                 {
                     "name": "",
                     "id": "00dd2217-5b62-4a68-82aa-1c4bb78c9883",
-                    "path": "",
-                    "interactions": "",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(pressPoint=0.5)",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
@@ -148,6 +157,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9edd7abb-d359-49cf-b1de-2c4675c17c7a",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

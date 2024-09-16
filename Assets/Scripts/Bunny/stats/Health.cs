@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BunnyStats : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public float health, maxHealth;
     public TextMeshProUGUI pointsEarned;
@@ -19,8 +19,17 @@ public class BunnyStats : MonoBehaviour
 
     void Die()
     {
-        deathPanel.SetActive(true);
-        pointsEarned.text = ("Your score:" + Score.points);
+        if (gameObject.tag == "Player")
+        {
+            deathPanel.SetActive(true);
+            pointsEarned.text = ("Your score:" + Score.points);
+        }
+
+
+        else if (gameObject.tag == "Enemy")
+        {
+
+        }
         //gameOver screen with point overview
         //stuff when dead
     }
