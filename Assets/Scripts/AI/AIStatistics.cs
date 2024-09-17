@@ -10,7 +10,8 @@ public class AIStatistics : MonoBehaviour
     [Header("statistics")]
 
     public float health;
-    public float speed;
+    public float movementSpeed;
+    public float rotationSpeed;
 
     public int points;
 }
