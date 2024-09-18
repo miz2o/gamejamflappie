@@ -35,6 +35,8 @@ public class Movement : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        currentSpeed = moveSpeed;
        
     }
 
@@ -74,7 +76,7 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.2f))
         {
-            if (hit.transform.tag != "Jumpable")
+            if (hit.transform.tag != "Untagged")
             {
                 return;
             }
