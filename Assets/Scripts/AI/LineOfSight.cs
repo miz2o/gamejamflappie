@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LineOfSight : MonoBehaviour
 {
+   [SerializeField] private HunterAI hunterAI;
+
+
     [Header("Line OF Sight Erea")]
 
     public float radius;
@@ -19,13 +22,18 @@ public class LineOfSight : MonoBehaviour
     public GameObject playerReference;
 
 
+    public RaycastHit hitInfo;
+
+
+    public bool playerIsViseble;
+
+
     [Header("Layers")]
 
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstructionMask;
 
 
-    public bool playerIsViseble;
 
 
     private void Start()

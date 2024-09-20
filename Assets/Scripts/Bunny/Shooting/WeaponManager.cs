@@ -5,18 +5,16 @@ using UnityEngine.InputSystem;
 public class WeaponManager : MonoBehaviour
 {
     public WeaponStatistics weaponStatistics;
-
+    public Transform weaponTransform;
 
     private BunnyInput bunnyInput;
     private InputAction shoot;
 
 
-    [SerializeField] private GameObject weapon;
-    [SerializeField] private float bulletSpeed;
-
-
     private int startAmunition;
-    private bool canShoot = true;
+    private int weaponAmmunition;
+
+    public bool canShoot = true;
 
 
     private void Awake()
@@ -42,6 +40,8 @@ public class WeaponManager : MonoBehaviour
     private void Start()
     {
         startAmunition = weaponStatistics.amunition;
+
+        weaponAmmunition = weaponStatistics.amunition;
     }
 
     public void OnShoot(InputAction.CallbackContext context)
@@ -55,21 +55,21 @@ public class WeaponManager : MonoBehaviour
 
     public void OnReload()
     {
-        weaponStatistics.amunition = startAmunition;
+        weaponAmmunition = startAmunition;
     }
 
 
-    private void Shoot()
+    public void Shoot()
     {
-        GameObject bullet = Instantiate(weaponStatistics.bulletProjectile, weapon.transform.position, weapon.transform.rotation);
+        GameObject bullet = Instantiate(weaponStatistics.bulletProjectile, weaponTransform.position, weaponTransform.rotation);
 
-        bullet.GetComponent<Rigidbody>().velocity = transform.right * bulletSpeed;
-
-
-        weaponStatistics.amunition --;
+        bullet.GetComponent<Rigidbody>().velocity = transform.right * weaponStatistics.bulletSpeed;
 
 
-        if(weaponStatistics.amunition == 0)
+        weaponAmmunition--;
+
+
+        if(weaponAmmunition < 1)
         {
             StartCoroutine(ReloadProces());
         }
@@ -82,7 +82,7 @@ public class WeaponManager : MonoBehaviour
     }
 
 
-    private IEnumerator ReloadProces()
+    public IEnumerator ReloadProces()
     {
         yield return new WaitForSeconds(weaponStatistics.realodTime);
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9190144660573007079}
   - component: {fileID: 7170891206859138514}
   m_Layer: 7
-  m_Name: Projectile
+  m_Name: Projectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb924aaa2a600b49808abe961ef81f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatistics: {fileID: 11400000, guid: 0403dd90facda284bb963af1cacfe648, type: 2}
+  weaponStatistics: {fileID: 11400000, guid: 2f1c580fbc54fbf49b33f5b005e2a761, type: 2}

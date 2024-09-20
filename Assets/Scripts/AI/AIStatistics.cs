@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AI", menuName = "AIStatistics")]
 
 
-public class AIStatistics : MonoBehaviour
+public class AIStatistics : ScriptableObject
 {
     [Header("statistics")]
 

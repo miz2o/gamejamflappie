@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class BulletManager : MonoBehaviour
@@ -26,11 +27,27 @@ public class BulletManager : MonoBehaviour
         Range();
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.layer == 6)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(weaponStatistics.damage);
+            }
+        }
+
+
         if (collision.gameObject.layer == 8)
         {
-            gameObject.GetComponent<Health>().TakeDamage(weaponStatistics.damage);
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<AIHealth>().TakeDamage(weaponStatistics.damage);
+            }
+
+
+            Destroy(gameObject);
         }
     }
 
