@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+/// this script 
 public class WeaponManager : MonoBehaviour
 {
     public WeaponStatistics weaponStatistics;
@@ -17,8 +19,10 @@ public class WeaponManager : MonoBehaviour
     public bool canShoot = true;
 
 
+    /// This function is called when the script instance is being loaded
     private void Awake()
     {
+        // Create a new instance of the BunnyInput class.
         bunnyInput = new BunnyInput();
     }
 
@@ -37,6 +41,8 @@ public class WeaponManager : MonoBehaviour
         shoot.Disable();
     }
 
+
+    /// Start is called 
     private void Start()
     {
         startAmunition = weaponStatistics.amunition;
@@ -44,8 +50,11 @@ public class WeaponManager : MonoBehaviour
         weaponAmmunition = weaponStatistics.amunition;
     }
 
+
+    /// Shoot is called whenever the input action is called.
     public void OnShoot(InputAction.CallbackContext context)
     {
+         
         if(context.performed && weaponStatistics.amunition >0 && canShoot == true)
         {
             Shoot();

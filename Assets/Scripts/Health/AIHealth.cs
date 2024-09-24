@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 
-/// This script will manage all things related to the health of the player and the AI bot's
+/// This script will manage all things related to the health of the AI.
 public class AIHealth : MonoBehaviour
 {
     [Header("Scripts")]
@@ -48,7 +48,7 @@ public class AIHealth : MonoBehaviour
         }
     }
 
-    /// Die is called everytime something dies.
+    /// Die is called everytime an AI dies.
     private void Die()
     {
         // Adds the amount of points the enemy gave to the player to the players point tally.

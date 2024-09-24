@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 
-/// This script will manage all things related to the health of the player and the AI bot's
+/// This script will manage all things related to the health of the player.
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Scripts")]

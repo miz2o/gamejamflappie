@@ -767,30 +767,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &1725459264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5813988599171051619, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
-  m_PrefabInstance: {fileID: 1956762049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1725459269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725459264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff5be0fc9e5e784983c9c24d43f0d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  health: 100
-  maximumHealth: 100
-  regenarationRate: 0
-  timeSinceLastDamaged: 0
-  pointsEarned: {fileID: 0}
-  deathPanel: {fileID: 0}
 --- !u!114 &1738296106 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6285159584249322480, guid: 9fffb4a4b53a7f446a98e91a6ce29c75, type: 3}
@@ -987,6 +963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 798422710117832112, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: maximumHealth
       value: 100
@@ -1044,29 +1024,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4042483027890580148, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042483027890580148, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5813988599171051619, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813988599171051619, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9203588316333084806, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6954377754400321999, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3353587486906732237, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1781238849383839614}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5813988599171051619, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1725459269}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
 --- !u!1001 &1781238849383839613
 PrefabInstance:
@@ -1090,7 +1074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 867295315049878365, guid: 86ca1bb41eff56d43943f0d7723f0871, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.27271843
+      value: 0.382
       objectReference: {fileID: 0}
     - target: {fileID: 867295315049878365, guid: 86ca1bb41eff56d43943f0d7723f0871, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1136,6 +1120,10 @@ PrefabInstance:
       propertyPath: weaponTransform
       value: 
       objectReference: {fileID: 1781238849383839614}
+    - target: {fileID: 9140935164349535659, guid: 86ca1bb41eff56d43943f0d7723f0871, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
