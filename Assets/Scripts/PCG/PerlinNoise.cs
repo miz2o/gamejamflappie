@@ -4,6 +4,7 @@ public class PerlinNoise : MonoBehaviour
 {
     public int width = 256;
     public int height = 256;
+    public int octaves;
 
     public float scale = 20f;
 
@@ -29,8 +30,11 @@ public class PerlinNoise : MonoBehaviour
         {
             for(int y = 0; y < height; y++)
             {
-                Color color = CalculateColor(x, y);
-                texture.SetPixel(x, y, color);
+                for(int i = 0 ; i < octaves; i++)
+                {
+                    Color color = CalculateColor(x, y);
+                    texture.SetPixel(x, y, color);
+                }
             }
         }
         
@@ -44,6 +48,7 @@ public class PerlinNoise : MonoBehaviour
         float yCoord = (float)y/height * scale + offsetY;
 
         float sample = Mathf.PerlinNoise(xCoord, yCoord);
+        //do stuff
         return new Color(sample, sample, sample);
 
     }
