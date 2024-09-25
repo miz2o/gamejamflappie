@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.2f))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.5f))
         {
             if (hit.transform.tag != "Untagged")
             {
