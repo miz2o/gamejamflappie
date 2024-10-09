@@ -7,6 +7,11 @@ public class TerrainGenerator : MonoBehaviour
     public float scale = 20;
     public float offsetX, offsetY;
 
+
+    //terrainColour
+    public Gradient terrainGradient;
+    private Color[,] colours;
+
     private void Start()
     {
         offsetX = Random.Range(0, 99999f);
@@ -17,6 +22,8 @@ public class TerrainGenerator : MonoBehaviour
     {
         Terrain terrain = GetComponent<Terrain>();
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
+
+       // terrain.materialTemplate.color = colours[width,height]; // idex out of bounds error
     }
 
     TerrainData GenerateTerrain(TerrainData terrainData)
@@ -40,8 +47,24 @@ public class TerrainGenerator : MonoBehaviour
                 heights[x, y] = CalculateHeights(x,y); // perlin noise value
             }
         }
+        ColourMap();
 
         return heights;
+    }
+
+    private void ColourMap()
+    {
+        colours = new Color[width, height];
+
+        for(int x = 0; x < width ; x++)
+        {
+            for (int y = 0;y < height ; y++)
+            {
+                float colourHeight = Mathf.InverseLerp(depth, width, height);
+                colours[x, y] = terrainGradient.Evaluate(colourHeight);
+
+            }
+        }
     }
     //taking coords and converting them into noise map coords, then were returning the value of the perlinNoise function coords and feeding them into the heights array
     float CalculateHeights(int x, int y)
