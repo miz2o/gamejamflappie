@@ -7,9 +7,7 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] int width = 10;
     [SerializeField] int height = 10;
 
-    [SerializeField] int xOffset;
-    [SerializeField] int zOffset;
-
+    [SerializeField] float xOffset, zOffset;
     [SerializeField] float noiseScale = 0.03f;
     [SerializeField] float heightMultiplier = 7;
 
@@ -31,7 +29,7 @@ public class GenerateTerrain : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
 
         TerrainGenerate();
-        GradientToTexture();
+        Colours();
 
         xOffset = Random.Range(0, 99999);
         zOffset = Random.Range(0, 99999);
@@ -40,32 +38,40 @@ public class GenerateTerrain : MonoBehaviour
     void Update()
     {
         TerrainGenerate();
-        GradientToTexture();
+        Colours();
 
         minTerrainHeight = mesh.bounds.min.y + transform.position.y - 0.1f;
         maxTerrainHeight = mesh.bounds.max.y + transform.position.y + 0.1f;
 
         
 
-        //mat.SetTexture("terrainGradient", gradientTexture);
+        material.SetTexture("TerrainMaterial", gradientTexture);
 
         material.SetFloat("minTerrainHeight", minTerrainHeight);
         material.SetFloat("maxTerrainHeight", maxTerrainHeight);
+
+        zOffset += 0.001f;
     }
 
-    private void GradientToTexture()
+    private void Colours()
     {
         gradientTexture = new Texture2D(1, 100);
         colours = new Color[vertices.Length];
 
-        for (int i = 0; i < vertices.Length; i++)
+        for (int i = 0, z = 0; z < vertices.Length; z++)
         {
-            float colourHeight = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices.Length);
+            float colourHeight = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
             colours[i] = terrainGradient.Evaluate(colourHeight);
+            i++;
         }
 
         gradientTexture.SetPixels(colours);
         gradientTexture.Apply();
+
+
+        //colours = new Color[vertices.Length];
+
+
     }
 
     private void TerrainGenerate()
