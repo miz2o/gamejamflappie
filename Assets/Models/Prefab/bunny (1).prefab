@@ -52,10 +52,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dfd8ddaa561922a46ac2398d3e6f2102, type: 2}
+    - target: {fileID: -3980210911485705757, guid: c42ba3dcb60e8ec4cbfc98b2342d8e71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49386e351a1e4ac489ec89c219463085, type: 2}
     - target: {fileID: 919132149155446097, guid: c42ba3dcb60e8ec4cbfc98b2342d8e71, type: 3}
       propertyPath: m_Name
       value: bunny (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5712869602063145976, guid: c42ba3dcb60e8ec4cbfc98b2342d8e71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dfd8ddaa561922a46ac2398d3e6f2102, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
