@@ -7,13 +7,16 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] int width = 10;
     [SerializeField] int height = 10;
 
+    private int meshScale = 100;
+
     [SerializeField] float xOffset, zOffset;
     [SerializeField] float noiseScale = 0.03f;
     [SerializeField] float heightMultiplier = 7;
 
     [SerializeField] int octaves = 1;
     [SerializeField] float lacunarity = 2;
-    [SerializeField] float persistance = 0.5f;   
+    [SerializeField] float persistance = 0.5f;
+    float lastNoiseHeight;
 
     float minTerrainHeight;
     float maxTerrainHeight;
@@ -21,6 +24,7 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] Gradient terrainGradient;
     [SerializeField] Material material;
 
+    private int[] triangles;
     private Mesh mesh;
     private Texture2D gradientTexture;
 
@@ -37,19 +41,28 @@ public class GenerateTerrain : MonoBehaviour
         TerrainGenerate();
         Colours();
 
+
         xOffset = Random.Range(0, 99999);
         zOffset = Random.Range(0, 99999);
+        CreateMap();
+    }
+
+    private void CreateMap()
+    {
+        TerrainGenerate();
+        Colours();
+        UpdateMesh();
+        SpawnObjects();
     }
 
     void Update()
     {
         TerrainGenerate();
         Colours();
-
         minTerrainHeight = mesh.bounds.min.y + transform.position.y - 0.1f;
         maxTerrainHeight = mesh.bounds.max.y + transform.position.y + 0.1f;
 
-        
+        UpdateMesh();
 
         material.SetTexture("TerrainMaterial", gradientTexture);
 
@@ -78,6 +91,34 @@ public class GenerateTerrain : MonoBehaviour
     private void SpawnObjects()
     {
         //looping through all of the vertecis and checking if an object can instatiate there
+
+        for(int i = 0; i < vertices.Length; i++)
+        {
+            Vector3 worldPoint = transform.TransformPoint(vertices[i]);
+            var noiseHeight = worldPoint.y;
+
+            if(System.Math.Abs(lastNoiseHeight - worldPoint.y) < 25)
+            {
+                if(noiseHeight > 1)
+                {
+                    if (Random.Range(0, 4) == 1 || Random.Range(0,4) == 2)
+                    {
+                        GameObject treesToSpawn = trees[Random.Range(0, trees.Length)];
+                        var spawnAboveTerrain = noiseHeight;
+                        Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.identity);
+                    }
+                    else if(Random.Range(0, 4) == 3)
+                    {
+                        GameObject objectsToSpawn = objects[Random.Range(0, objects.Length)];
+                        var spawnAboveTerrain = noiseHeight;
+                        Instantiate(objectsToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.identity);
+                    }
+
+                }
+            }
+
+            lastNoiseHeight = noiseHeight;
+        }
     }
 
     private void TerrainGenerate()
@@ -109,7 +150,7 @@ public class GenerateTerrain : MonoBehaviour
         //TRIANGLES
         //generating triangles
         //we are making a square which has 2 triangles and every tri has 3 points thats why where multiplying by 6
-        int[] triangles = new int[width * height * 6];
+        triangles = new int[width * height * 6];
 
         int vertex = 0;
         int triangleIndex = 0;
@@ -131,15 +172,24 @@ public class GenerateTerrain : MonoBehaviour
             }
             vertex++;
         }
+        //UpdateMesh();
+    }
 
+
+    private void UpdateMesh()
+    {
         mesh.Clear();
-
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.colors = colours;
         mesh.RecalculateNormals();
+        //mesh.RecalculateTangents();
 
-        GetComponent<MeshCollider>().sharedMesh = mesh; 
+        GetComponent<MeshCollider>().sharedMesh = mesh;
+        gameObject.transform.localScale = new Vector3(meshScale, meshScale, meshScale);
+
+
+        //SpawnObjects();
     }
 }
