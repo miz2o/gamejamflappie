@@ -134,9 +134,12 @@ public class GenerateTerrain : MonoBehaviour
 
         mesh.Clear();
 
+
         mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.colors = colours;
         mesh.RecalculateNormals();
+
+        GetComponent<MeshCollider>().sharedMesh = mesh; 
     }
 }
