@@ -11,6 +11,10 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] float noiseScale = 0.03f;
     [SerializeField] float heightMultiplier = 7;
 
+    [SerializeField] int octaves = 1;
+    [SerializeField] float lacunarity = 2;
+    [SerializeField] float persistance = 0.5f;   
+
     float minTerrainHeight;
     float maxTerrainHeight;
 
@@ -19,6 +23,8 @@ public class GenerateTerrain : MonoBehaviour
 
     private Mesh mesh;
     private Texture2D gradientTexture;
+
+    [SerializeField] GameObject[] trees, objects;
 
     Color[] colours;
     Vector3[] vertices;
@@ -50,7 +56,7 @@ public class GenerateTerrain : MonoBehaviour
         material.SetFloat("minTerrainHeight", minTerrainHeight);
         material.SetFloat("maxTerrainHeight", maxTerrainHeight);
 
-        zOffset += 0.001f;
+        //zOffset += 0.001f;
     }
 
     private void Colours()
@@ -67,11 +73,11 @@ public class GenerateTerrain : MonoBehaviour
 
         gradientTexture.SetPixels(colours);
         gradientTexture.Apply();
+    }
 
-
-        //colours = new Color[vertices.Length];
-
-
+    private void SpawnObjects()
+    {
+        //looping through all of the vertecis and checking if an object can instatiate there
     }
 
     private void TerrainGenerate()
@@ -84,7 +90,17 @@ public class GenerateTerrain : MonoBehaviour
         {
             for (int x = 0; x <= width; x++)
             {
-                float yPos = Mathf.PerlinNoise((x + xOffset) * noiseScale, (z + zOffset) * noiseScale) * heightMultiplier;
+                float yPos = 0;
+
+                for(int o = 0; o < octaves; o++)
+                {
+                    float frequency = Mathf.Pow(lacunarity, o);
+                    float amplitude = Mathf.Pow(persistance, o);
+
+                    yPos += Mathf.PerlinNoise((x + xOffset) * noiseScale * frequency, (z + zOffset) * noiseScale * frequency) * amplitude;
+                }
+                yPos *= heightMultiplier;
+
                 vertices[i] = new Vector3(x, yPos, z);
                 i++;
             }
@@ -123,70 +139,4 @@ public class GenerateTerrain : MonoBehaviour
         mesh.colors = colours;
         mesh.RecalculateNormals();
     }
-
-    /*public int width = 100, height = 100;
-   // public float depth = 20;
-
-    public float noiseScale = 0.03f;
-    public float heightMultiplier = 7;
-    public Mesh mesh;
-    Vector3[] vertices;
-
-    void Start()
-    {
-        mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
-        TerrainGenerator();
-    }
-
-    void Update()
-    {
-        TerrainGenerator();
-    }
-
-    public void TerrainGenerator()
-    {
-        vertices = new Vector3[(width + 1) * (height + 1)];
-
-        int i = 0;
-        for (int z = 0; z < height; z++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                float yPos = Mathf.PerlinNoise(x * noiseScale, z * noiseScale) * heightMultiplier;
-
-                vertices[i] = new Vector3(x, yPos, z);
-                i++;
-            }
-        }
-
-        //TRIANGLES
-        int[] triangles = new int[width * height * 6];
-
-        int vertex = 0;
-        int triangleIndex = 0;
-
-        for (int z = 0; z < height; z++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                triangles[triangleIndex + 0] = vertex + 0;
-                triangles[triangleIndex + 1] = vertex + width + 1;
-                triangles[triangleIndex + 2] = vertex + 1;
-
-                triangles[triangleIndex + 3] = vertex + 1;
-                triangles[triangleIndex + 4] = vertex + width + 1;
-                triangles[triangleIndex + 5] = vertex + width + 2;
-
-                vertex++;
-                triangleIndex += 6;
-            }
-            vertex++;
-        }
-        mesh.Clear();
-
-        mesh.vertices = vertices;
-        mesh.triangles = triangles;
-        mesh.RecalculateNormals();
-    }*/
 }
