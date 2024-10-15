@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class LineOfSight : MonoBehaviour
 {
-   [SerializeField] private HunterAI hunterAI;
-
-
     [Header("Line OF Sight Erea")]
 
     public float radius;

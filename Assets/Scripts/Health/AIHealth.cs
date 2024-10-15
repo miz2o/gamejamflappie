@@ -51,11 +51,11 @@ public class AIHealth : MonoBehaviour
     /// Die is called everytime an AI dies.
     private void Die()
     {
-        // Destroyes the gameobejct this script is on.
-        Destroy(gameObject);
         // Adds the amount of points the enemy gave to the player to the players point tally.
         score.AddPoints(aiStatistics.points);
 
 
+        // Destroyes the gameobejct this script is on.
+        Destroy(gameObject);
     }
 }
