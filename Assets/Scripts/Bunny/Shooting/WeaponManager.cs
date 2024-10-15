@@ -17,7 +17,7 @@ public class WeaponManager : MonoBehaviour
     private int weaponAmmunition;
 
     public bool canShoot = true;
-    public Animator animator;
+//    public Animator animator;
 
 
     /// This function is called when the script instance is being loaded
@@ -75,7 +75,7 @@ public class WeaponManager : MonoBehaviour
 
         bullet.GetComponent<Rigidbody>().velocity = transform.right * weaponStatistics.bulletSpeed;
 
-        animator.SetTrigger("shoot");
+        //animator.SetTrigger("shoot");
         weaponAmmunition--;
 
 
@@ -94,7 +94,7 @@ public class WeaponManager : MonoBehaviour
 
     public IEnumerator ReloadProces()
     {
-        animator.SetTrigger("reload");
+        //animator.SetTrigger("reload");
         yield return new WaitForSeconds(weaponStatistics.realodTime);
 
 

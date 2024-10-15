@@ -57,6 +57,10 @@ PrefabInstance:
       value: Stronk
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09ccc0e9252eaed4595179497ab7462b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09ccc0e9252eaed4595179497ab7462b, type: 3}
       propertyPath: m_TagString
       value: Jumpable
       objectReference: {fileID: 0}

@@ -73,6 +73,10 @@ PrefabInstance:
       value: Steen2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19763dd69b0e7b546bae9d286e480967, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 19763dd69b0e7b546bae9d286e480967, type: 3}
       propertyPath: m_TagString
       value: Jumpable
       objectReference: {fileID: 0}

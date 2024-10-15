@@ -57,6 +57,10 @@ PrefabInstance:
       value: HunterCabin1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cdd51723d10852746ae67eacc9792b70, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdd51723d10852746ae67eacc9792b70, type: 3}
       propertyPath: m_TagString
       value: Jumpable
       objectReference: {fileID: 0}

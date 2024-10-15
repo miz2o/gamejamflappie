@@ -57,6 +57,10 @@ PrefabInstance:
       value: Tent1Oranje
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a26efab41adafb0498edc23c3bddf308, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a26efab41adafb0498edc23c3bddf308, type: 3}
       propertyPath: m_TagString
       value: Jumpable
       objectReference: {fileID: 0}

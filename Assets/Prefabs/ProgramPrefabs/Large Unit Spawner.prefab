@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986056844641501613}
   - component: {fileID: 2603124188453022807}
+  - component: {fileID: 3913998121370306456}
   m_Layer: 0
   m_Name: Large Unit Spawner
   m_TagString: Untagged
@@ -44,11 +45,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hunterSpawner: 0
+  civilianSpawner: 0
   hunterUnit: {fileID: 0}
   civilianUnits: []
   minimalUnitsToSpawn: 0
   maximalUnitsToSpawn: 0
   spawnRange: 0
-  ground:
+  overlapSphereRadius: 0
+  groundLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!135 &3913998121370306456
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385396011972205910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

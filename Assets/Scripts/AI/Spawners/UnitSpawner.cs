@@ -36,7 +36,7 @@ public class UnitSpawner : MonoBehaviour
 
     private void Start()
     {
-        if (hunterSpawner)
+        if (hunterSpawner == true)
         {
             HunterUnitSpawner();
         }
