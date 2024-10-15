@@ -5,82 +5,55 @@ using System;
 
 public class PathRequestManager : MonoBehaviour
 {
-    Pathfinding pathFinding;
+    Queue<PathRequest> pathRequestQueue = new Queue<PathRequest>();
+    PathRequest currentPathRequest;
 
-    private static PathRequestManager instance;
-    
-    
-    private Queue<PathRequest> pathRequests = new Queue<PathRequest>();
+    static PathRequestManager instance;
+    Pathfinding pathfinding;
 
+    bool isProcessingPath;
 
-    private PathRequest currentPathRequest;
-
-
-    private bool isProccesingPath;
-
-
-    private void Awake()
+    void Awake()
     {
         instance = this;
-
-
-        pathFinding = GetComponent<Pathfinding>();
+        pathfinding = GetComponent<Pathfinding>();
     }
 
-
-    public static void RequestPath(Vector3 pathStart, Vector3 pathEnd, Action<Vector3[], bool> callBack)
+    public static void RequestPath(Vector3 pathStart, Vector3 pathEnd, Action<Vector3[], bool> callback)
     {
-        PathRequest newRequest = new PathRequest(pathStart, pathEnd, callBack);
-
-        
-        instance.pathRequests.Enqueue(newRequest);
-
-
-        instance.TryProccesNext();
+        PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback);
+        instance.pathRequestQueue.Enqueue(newRequest);
+        instance.TryProcessNext();
     }
 
-
-    private void TryProccesNext()
+    void TryProcessNext()
     {
-        if (!isProccesingPath && pathRequests.Count > 0)
+        if (!isProcessingPath && pathRequestQueue.Count > 0)
         {
-            currentPathRequest= pathRequests.Dequeue();
-
-
-            isProccesingPath= true;
-
-
-            pathFinding.StartFindPath(currentPathRequest.pathStart, currentPathRequest.pathEnd);
+            currentPathRequest = pathRequestQueue.Dequeue();
+            isProcessingPath = true;
+            pathfinding.StartFindPath(currentPathRequest.pathStart, currentPathRequest.pathEnd);
         }
     }
 
-
-    public void FinishedProcessingPath(Vector3[] path, bool succes)
+    public void FinishedProcessingPath(Vector3[] path, bool success)
     {
-        currentPathRequest.callBack(path,succes);
-
-
-        isProccesingPath = false;
-
-
-        TryProccesNext();
+        currentPathRequest.callback(path, success);
+        isProcessingPath = false;
+        TryProcessNext();
     }
 
-
-    public struct PathRequest
+    struct PathRequest
     {
         public Vector3 pathStart;
         public Vector3 pathEnd;
+        public Action<Vector3[], bool> callback;
 
-        public Action<Vector3[], bool> callBack;
-
-
-        public PathRequest(Vector3 _start, Vector3 _end, Action<Vector3[], bool> _callBack)
+        public PathRequest(Vector3 _start, Vector3 _end, Action<Vector3[], bool> _callback)
         {
             pathStart = _start;
-            pathEnd= _end;
-
-            callBack= _callBack;
+            pathEnd = _end;
+            callback = _callback;
         }
     }
 }
