@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
     private Vector2 look;
     private float x, y;
 
+    public Animator animator;
 
     public bool isGrounded, jumping;
 
@@ -47,6 +48,7 @@ public class Movement : MonoBehaviour
         rotate = bunnyInput.Bunny.Mouse;
         bunnyInput.Bunny.Mouse.Enable();
         rotate.Enable();
+        animator.SetTrigger("idle");
     }
 
     private void OnDisable()
@@ -92,8 +94,8 @@ public class Movement : MonoBehaviour
         }
 
         //animations
-        /*float actualSpeed = new Vector3(rb.velocity.x, rb.velocity.z, 0).magnitude;
-        movementAnimator.SetFloat("Actual Speed", actualSpeed);*/
+       
+        animator.SetFloat("speed", currentSpeed);
     }
 
     private Vector3 GetCameraForward(Camera cam)
@@ -132,6 +134,7 @@ public class Movement : MonoBehaviour
                 jumping = true;
                 isGrounded = false;
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                animator.SetTrigger("jump");
             }
 
         }
@@ -141,6 +144,7 @@ public class Movement : MonoBehaviour
         if (context.performed)
         {
             currentSpeed = moveSpeed + sprintspeed;
+            
         }
         else
         {

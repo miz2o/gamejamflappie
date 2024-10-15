@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 386.2741, y: -58.836594}
+  m_AnchoredPosition: {x: 386.27417, y: -58.836548}
   m_SizeDelta: {x: -1018.0256, y: -964.8872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63385076
@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.457687, y: 265.00668}
+  m_AnchoredPosition: {x: -22.457764, y: 265.0067}
   m_SizeDelta: {x: -851.4571, y: -1001.3023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894440410
@@ -3022,6 +3022,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2041325552538610422, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 919f98eb5d4be114787767cf74177fa7, type: 2}
     - target: {fileID: 2917204513454898645, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_Name
       value: PlayerHolder

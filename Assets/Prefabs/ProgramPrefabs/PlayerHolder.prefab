@@ -201,6 +201,7 @@ MonoBehaviour:
   currentSpeed: 0.8
   forceDirection: {x: 1, y: 1, z: 1}
   jump: {x: 1, y: 1, z: 1}
+  animator: {fileID: 2041325552538610422}
   isGrounded: 0
   jumping: 0
 --- !u!114 &1023655490283571154
@@ -411,15 +412,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9019755943315103914, guid: 40260937580bb46439ccc6c3abc61cb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0.057
       objectReference: {fileID: 0}
     - target: {fileID: 9019755943315103914, guid: 40260937580bb46439ccc6c3abc61cb5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3149359
+      value: -1.396
       objectReference: {fileID: 0}
     - target: {fileID: 9019755943315103914, guid: 40260937580bb46439ccc6c3abc61cb5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.16100003
+      value: 0.332
       objectReference: {fileID: 0}
     - target: {fileID: 9019755943315103914, guid: 40260937580bb46439ccc6c3abc61cb5, type: 3}
       propertyPath: m_LocalRotation.w
