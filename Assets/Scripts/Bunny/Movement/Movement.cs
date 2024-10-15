@@ -78,14 +78,14 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.9f))
         {
-            if (hit.transform.tag != "Untagged")
+            if (hit.transform.tag == "Jumpable")
             {
-                return;
-            }
-            if (!isGrounded)
-            {
-                isGrounded = true;
-                jumping = false;
+                //return;
+                if (!isGrounded)
+                {
+                    isGrounded = true;
+                    jumping = false;
+                }
             }
         }
         else
@@ -95,7 +95,7 @@ public class Movement : MonoBehaviour
 
         //animations
        
-        animator.SetFloat("speed", currentSpeed);
+        animator.SetFloat("Speed", currentSpeed);
     }
 
     private Vector3 GetCameraForward(Camera cam)
@@ -129,8 +129,6 @@ public class Movement : MonoBehaviour
         {
             if (isGrounded)
             {
-                Debug.Log("JUMP");
-                 //movementAnimator.SetTrigger("Jumping");
                 jumping = true;
                 isGrounded = false;
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
@@ -144,11 +142,13 @@ public class Movement : MonoBehaviour
         if (context.performed)
         {
             currentSpeed = moveSpeed + sprintspeed;
-            
+            animator.SetFloat("Speed", currentSpeed);
+
         }
         else
         {
             currentSpeed = moveSpeed;
+            animator.SetFloat("Speed", currentSpeed);
         }
     }
 
