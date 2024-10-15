@@ -102,7 +102,7 @@ MonoBehaviour:
   xOffset: 0
   zOffset: 0
   noiseScale: 0.06
-  heightMultiplier: 0.4
+  heightMultiplier: 0.2
   octaves: 3
   lacunarity: 2
   persistance: 1.15
@@ -155,6 +155,15 @@ MonoBehaviour:
   - {fileID: 7511423096170569432, guid: ddb964fd963f01d4f876ec1d054b3e61, type: 3}
   - {fileID: 5020437146114271042, guid: 99add72a26d5435438d8c6cb07abf5f4, type: 3}
   - {fileID: 3954903819212784087, guid: 6ad4bd833ab435c4ba8a1aabf1b57350, type: 3}
+  - {fileID: 3157029112029549001, guid: 8d21b9e7f8152b84baa5c4f542c2e33a, type: 3}
+  - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
+  - {fileID: 3954903819212784087, guid: 6ad4bd833ab435c4ba8a1aabf1b57350, type: 3}
+  - {fileID: 3594978650402042866, guid: a7b6e7f96eebfc04a8ae71a9840869e7, type: 3}
+  - {fileID: 4196457445015561261, guid: e400626d4d94f9740b7941779cad583a, type: 3}
+  - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
+  - {fileID: 5279247715109364543, guid: 0177f11a1f83e7446a89f2a443a8adf6, type: 3}
+  - {fileID: 3764959523454503745, guid: f959b48287cd85845bd037112a3ccdb0, type: 3}
+  - {fileID: 3464333008910666049, guid: b0fc70fed0058d24ab1345e053ba9fa6, type: 3}
 --- !u!64 &7979516696082803130
 MeshCollider:
   m_ObjectHideFlags: 0

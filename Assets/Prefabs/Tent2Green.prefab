@@ -56,8 +56,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tent2Green
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc7c28ed5e2116e4da7c3f9177ac9969, type: 3}
+      propertyPath: m_TagString
+      value: Jumpable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc7c28ed5e2116e4da7c3f9177ac9969, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3600464169241284261}
   m_SourcePrefab: {fileID: 100100000, guid: dc7c28ed5e2116e4da7c3f9177ac9969, type: 3}
+--- !u!1 &3738488294888454058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc7c28ed5e2116e4da7c3f9177ac9969, type: 3}
+  m_PrefabInstance: {fileID: 4548827600524741371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3600464169241284261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738488294888454058}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1866198, y: 1.8997877, z: 2.1607144}
+  m_Center: {x: -0.20901746, y: 0.88817835, z: 0.32698667}

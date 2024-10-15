@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour
 {
     public GameObject highscoreMenu;
 
+    bool highscoreMenuOn;
     public void ClickButton(string sceneToLoad)
     {
         SceneManager.LoadScene(sceneToLoad);
@@ -14,12 +15,14 @@ public class SwitchScene : MonoBehaviour
 
     public void TurnMenuO()
     {
-        if (highscoreMenu)
+        if (highscoreMenuOn)
         {
             highscoreMenu.SetActive(false);
+            highscoreMenuOn = false;
         }
         else
         {
+            highscoreMenuOn = true;
             highscoreMenu.SetActive(true);
         }
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public float gameTimer;
+    public string timerFormatted;
     public static float  highScore;
     public int points;
 
@@ -17,6 +18,7 @@ public class Score : MonoBehaviour
     private void Start()
     {
         points = 0;
+        timerOn = true;
     }
 
     private void Update()
@@ -25,6 +27,8 @@ public class Score : MonoBehaviour
         if (timerOn)
         {
             gameTimer -= Time.deltaTime;
+            DisplayTime(gameTimer);
+
             if (gameTimer < 0)
             {
             
@@ -32,7 +36,6 @@ public class Score : MonoBehaviour
                 gameOver = true;
 
                 timeUpScreen.SetActive(true);
-                
 
                 timeUpPoints.text = ("Your score:" + points);
                 //time over screen with points
@@ -41,6 +44,16 @@ public class Score : MonoBehaviour
         }
 
     }
+    void DisplayTime(float timeToDisplay)
+    {
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        float milliSeconds = (timeToDisplay % 1) * 1000;
+
+        timer.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliSeconds);
+    }
+
+
     public void AddPoints(int pointsEarned)
     {
         points = +pointsEarned;

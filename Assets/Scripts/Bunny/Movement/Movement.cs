@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.5f))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 0.9f))
         {
             if (hit.transform.tag != "Untagged")
             {
@@ -138,7 +138,7 @@ public class Movement : MonoBehaviour
     }
     public void Sprint(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed)
         {
             currentSpeed = moveSpeed + sprintspeed;
         }

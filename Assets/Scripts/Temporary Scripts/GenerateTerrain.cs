@@ -7,7 +7,7 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] int width = 1;
     [SerializeField] int height = 1;
 
-    private int meshScale = 40;
+    private int meshScale = 25;
 
     [SerializeField] float xOffset, zOffset;
     [SerializeField] float noiseScale = 0.03f;

@@ -56,8 +56,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: klSteen2-moss
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0d9b02f67045ba4a973b0b4081efa58, type: 3}
+      propertyPath: m_TagString
+      value: Jumpable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b0d9b02f67045ba4a973b0b4081efa58, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 195363934782110665}
   m_SourcePrefab: {fileID: 100100000, guid: b0d9b02f67045ba4a973b0b4081efa58, type: 3}
+--- !u!1 &2985548947251186269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0d9b02f67045ba4a973b0b4081efa58, type: 3}
+  m_PrefabInstance: {fileID: 2715570669675869964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &195363934782110665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985548947251186269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.533608, y: 1.6984429, z: 1.8098304}
+  m_Center: {x: 0.021605909, y: 0.84922147, z: -0.009864539}
