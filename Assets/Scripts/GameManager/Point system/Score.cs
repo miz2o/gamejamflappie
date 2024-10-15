@@ -28,7 +28,7 @@ public class Score : MonoBehaviour
         {
             gameTimer -= Time.deltaTime;
             DisplayTime(gameTimer);
-
+            pointUi.text = points.ToString();
             if (gameTimer < 0)
             {
             
@@ -36,6 +36,8 @@ public class Score : MonoBehaviour
                 gameOver = true;
 
                 timeUpScreen.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
 
                 timeUpPoints.text = ("Your score:" + points);
                 //time over screen with points
@@ -57,7 +59,7 @@ public class Score : MonoBehaviour
     public void AddPoints(int pointsEarned)
     {
         points = +pointsEarned;
-
+        pointUi.text = points.ToString();
         if (points > highScore)
         {
             SetHighscore();

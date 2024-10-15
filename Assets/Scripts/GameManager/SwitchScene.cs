@@ -26,4 +26,9 @@ public class SwitchScene : MonoBehaviour
             highscoreMenu.SetActive(true);
         }
     }
+
+    public void Quitgame()
+    {
+        Application.Quit();
+    }
 }
