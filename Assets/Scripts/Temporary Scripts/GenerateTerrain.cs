@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GenerateTerrain : MonoBehaviour
 {
-    [SerializeField] int width = 10;
-    [SerializeField] int height = 10;
+    [SerializeField] int width = 1;
+    [SerializeField] int height = 1;
 
-    private int meshScale = 100;
+    private int meshScale = 40;
 
     [SerializeField] float xOffset, zOffset;
     [SerializeField] float noiseScale = 0.03f;
@@ -74,7 +74,7 @@ public class GenerateTerrain : MonoBehaviour
 
     private void Colours()
     {
-        gradientTexture = new Texture2D(1, 100);
+        gradientTexture = new Texture2D(1, 10);
         colours = new Color[vertices.Length];
 
         for (int i = 0, z = 0; z < vertices.Length; z++)
@@ -101,17 +101,17 @@ public class GenerateTerrain : MonoBehaviour
             {
                 if(noiseHeight > 1)
                 {
-                    if (Random.Range(0, 4) == 1 || Random.Range(0,4) == 2)
+                    if (Random.Range(0, 2) == 1)
                     {
                         GameObject treesToSpawn = trees[Random.Range(0, trees.Length)];
-                        var spawnAboveTerrain = noiseHeight;
-                        Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.identity);
+                        var spawnAboveTerrain = noiseHeight * 0.995f;
+                        Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0,360), 0)));
                     }
-                    else if(Random.Range(0, 4) == 3)
+                    else if(Random.Range(0, 4) == 1)
                     {
                         GameObject objectsToSpawn = objects[Random.Range(0, objects.Length)];
-                        var spawnAboveTerrain = noiseHeight;
-                        Instantiate(objectsToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.identity);
+                        var spawnAboveTerrain = noiseHeight * 0.995f;
+                        Instantiate(objectsToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)));
                     }
 
                 }
