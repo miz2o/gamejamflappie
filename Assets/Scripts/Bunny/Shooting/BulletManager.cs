@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 
@@ -8,14 +5,14 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
     [Header("Scripteble Objects")]
-    
+
     public WeaponStatistics weaponStatistics;
 
 
     [Header("Bullet Position")]
 
-     private Vector3 startPosition;
-     private float distanceTraveled;
+    private Vector3 startPosition;
+    private float distanceTraveled;
 
 
     /// this void is called before the first frame.
