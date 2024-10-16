@@ -73,7 +73,7 @@ public class WeaponManager : MonoBehaviour
     {
         GameObject bullet = Instantiate(weaponStatistics.bulletProjectile, weaponTransform.position, weaponTransform.rotation);
 
-        bullet.GetComponent<Rigidbody>().velocity = transform.right * weaponStatistics.bulletSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = transform.forward * weaponStatistics.bulletSpeed;
 
         //animator.SetTrigger("shoot");
         weaponAmmunition--;
