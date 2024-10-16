@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class HunterUnit : MonoBehaviour
 {
@@ -33,6 +34,9 @@ public class HunterUnit : MonoBehaviour
         thisAmmunition = weaponStatistics.amunition;
 
         thisSpeed = aiStatistics.movementSpeed;
+
+
+        target = GameObject.Find("PlayerHolder").transform;
     }
 
 

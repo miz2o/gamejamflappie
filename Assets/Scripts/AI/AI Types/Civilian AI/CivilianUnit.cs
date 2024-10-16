@@ -24,8 +24,10 @@ public class CivilianUnit : MonoBehaviour
 
 
         thisSpeed = aiStatistics.movementSpeed;
-    }
 
+
+        targetObject = GameObject.Find("PlayerHolder").transform;
+    }
 
     private void Update()
     {
