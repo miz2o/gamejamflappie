@@ -55,7 +55,7 @@ MonoBehaviour:
   overlapSphereRadius: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
 --- !u!135 &-4426723031558244355
 SphereCollider:
   m_ObjectHideFlags: 0
