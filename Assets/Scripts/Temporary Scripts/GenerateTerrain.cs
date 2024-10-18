@@ -49,11 +49,11 @@ public class GenerateTerrain : MonoBehaviour
         //CreateMap();
     }
 
-    private void CreateMap()
+   /* private void CreateMap()
     {
         TerrainGenerate();
         Colours();
-    }
+    }*/
 
     void Update()
     {
@@ -93,6 +93,7 @@ public class GenerateTerrain : MonoBehaviour
     {
         //looping through all of the vertecis and checking if an object can instatiate there
 
+
         for(int i = 0; i < vertices.Length; i++)
         {
             Vector3 worldPoint = transform.TransformPoint(vertices[i]);
@@ -100,18 +101,20 @@ public class GenerateTerrain : MonoBehaviour
 
             if(System.Math.Abs(lastNoiseHeight - worldPoint.y) < 25)
             {
-                if(noiseHeight > 1)
+                if(noiseHeight > 0)
                 {
                     if (Random.Range(0, 2) == 1)
                     {
                         GameObject treesToSpawn = trees[Random.Range(0, trees.Length)];
-                        var spawnAboveTerrain = noiseHeight * 0.8f;
+                        var spawnAboveTerrain = noiseHeight;
+                        
                         Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0,360), 0)));
+                        
                     }
                     else if(Random.Range(0, 4) == 1)
                     {
                         GameObject objectsToSpawn = objects[Random.Range(0, objects.Length)];
-                        var spawnAboveTerrain = noiseHeight * 0.8f;
+                        var spawnAboveTerrain = noiseHeight;
                         Instantiate(objectsToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)));
                     }
 
