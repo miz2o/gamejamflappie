@@ -12,7 +12,7 @@ public class HunterUnit : MonoBehaviour
 
     [Header("Script references")]
 
-    [SerializeField] private WeaponManager weaponManager;
+    [SerializeField] private HunterWeaponManager hunterWeaponManager;
     private LineOfSight lineOfSight;
 
 
@@ -67,14 +67,14 @@ public class HunterUnit : MonoBehaviour
         }
 
 
-        if (lineOfSight.playerIsViseble == true && weaponManager.canShoot == true && thisAmmunition > 0)
+        if (lineOfSight.playerIsViseble == true && hunterWeaponManager.canShoot == true && thisAmmunition > 0)
         {
             ShootAtPlayer();
         }
 
-        else if (lineOfSight.playerIsViseble == true && weaponManager.canShoot == true && thisAmmunition <= 0)
+        else if (lineOfSight.playerIsViseble == true && hunterWeaponManager.canShoot == true && thisAmmunition <= 0)
         {
-            StartCoroutine(weaponManager.ReloadProces());
+            StartCoroutine(hunterWeaponManager.ReloadProces());
         }
     }
    
@@ -148,15 +148,15 @@ public class HunterUnit : MonoBehaviour
 
     private void ShootAtPlayer()
     {
-        weaponManager.Shoot();
+        hunterWeaponManager.Shoot();
 
 
         if (thisAmmunition < 1)
         {
-            weaponManager.canShoot = false;
+            hunterWeaponManager.canShoot = false;
 
 
-            StartCoroutine(weaponManager.ReloadProces());
+            StartCoroutine(hunterWeaponManager.ReloadProces());
         }
 
     }
