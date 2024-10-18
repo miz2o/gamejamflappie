@@ -14,10 +14,12 @@ public class WeaponManager : MonoBehaviour
 
 
     private int startAmunition;
-    private int weaponAmmunition;
+    private int thisAmmunition;
 
     public bool canShoot = true;
-//    public Animator animator;
+
+
+    public Animator animator;
 
 
     /// This function is called when the script instance is being loaded
@@ -48,15 +50,14 @@ public class WeaponManager : MonoBehaviour
     {
         startAmunition = weaponStatistics.amunition;
 
-        weaponAmmunition = weaponStatistics.amunition;
+        thisAmmunition = weaponStatistics.amunition;
     }
 
 
     /// Shoot is called whenever the input action is called.
     public void OnShoot(InputAction.CallbackContext context)
     {
-         
-        if(context.performed && weaponStatistics.amunition >0 && canShoot == true)
+        if(context.performed && weaponStatistics.amunition > 0 && canShoot == true)
         {
             Shoot();
         }
@@ -65,21 +66,23 @@ public class WeaponManager : MonoBehaviour
 
     public void OnReload()
     {
-        weaponAmmunition = startAmunition;
+        thisAmmunition = startAmunition;
     }
 
 
     public void Shoot()
     {
+        animator.SetTrigger("shoot");
+
+
         GameObject bullet = Instantiate(weaponStatistics.bulletProjectile, weaponTransform.position, weaponTransform.rotation);
 
         bullet.GetComponent<Rigidbody>().velocity = transform.forward * weaponStatistics.bulletSpeed;
 
-        //animator.SetTrigger("shoot");
-        weaponAmmunition--;
+        thisAmmunition --;
 
 
-        if(weaponAmmunition < 1)
+        if(thisAmmunition < 1)
         {
             StartCoroutine(ReloadProces());
         }
@@ -94,7 +97,9 @@ public class WeaponManager : MonoBehaviour
 
     public IEnumerator ReloadProces()
     {
-        //animator.SetTrigger("reload");
+        animator.SetTrigger("reload");
+
+
         yield return new WaitForSeconds(weaponStatistics.realodTime);
 
 
@@ -104,6 +109,7 @@ public class WeaponManager : MonoBehaviour
     private IEnumerator FireCooldDown()
     {
         yield return new WaitForSeconds(1 / weaponStatistics.fireRate);
+
 
         canShoot = true;
     }

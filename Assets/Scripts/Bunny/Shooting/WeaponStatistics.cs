@@ -18,5 +18,4 @@ public class WeaponStatistics : ScriptableObject
 
 
     public GameObject bulletProjectile;
-    public GameObject weapon;
 }
