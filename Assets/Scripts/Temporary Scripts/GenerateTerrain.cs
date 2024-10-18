@@ -33,7 +33,7 @@ public class GenerateTerrain : MonoBehaviour
     Color[] colours;
     Vector3[] vertices;
 
-    void Start()
+    public void CallInAwake()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
@@ -41,24 +41,25 @@ public class GenerateTerrain : MonoBehaviour
         TerrainGenerate();
         Colours();
 
+        UpdateMesh();
+        SpawnObjects();
 
         xOffset = Random.Range(0, 99999);
         zOffset = Random.Range(0, 99999);
-        CreateMap();
+        //CreateMap();
     }
 
     private void CreateMap()
     {
         TerrainGenerate();
         Colours();
-        UpdateMesh();
-        SpawnObjects();
     }
 
     void Update()
     {
-        TerrainGenerate();
+        //TerrainGenerate();
         Colours();
+       
         minTerrainHeight = mesh.bounds.min.y + transform.position.y - 0.1f;
         maxTerrainHeight = mesh.bounds.max.y + transform.position.y + 0.1f;
 
