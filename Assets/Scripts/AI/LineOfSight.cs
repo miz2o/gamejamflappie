@@ -31,11 +31,9 @@ public class LineOfSight : MonoBehaviour
     [SerializeField] private LayerMask obstructionMask;
 
 
-
-
     private void Start()
     {
-        playerReference = GameObject.FindGameObjectWithTag("Player");
+        playerReference = GameObject.Find("PlayerHolder");
 
 
         StartCoroutine(InSightCheck());

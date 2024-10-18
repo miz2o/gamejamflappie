@@ -12,8 +12,17 @@ public class Grid : MonoBehaviour
     public float nodeDiameter;
     int gridSizeX, gridSizeY;
 
+
+    private GenerateTerrain generateTerrain;
+
     void Awake()
     {
+        generateTerrain = GameObject.Find("Mesh Generator").GetComponent<GenerateTerrain>();
+
+
+        generateTerrain.CallInAwake();
+
+
         nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
         gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
@@ -82,7 +91,7 @@ public class Grid : MonoBehaviour
         return grid[x, y];
     }
 
-    /*void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
 
@@ -94,5 +103,5 @@ public class Grid : MonoBehaviour
                 Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
             }
         }
-    }*/
+    }
 }

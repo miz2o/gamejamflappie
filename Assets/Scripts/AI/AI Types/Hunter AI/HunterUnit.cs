@@ -28,15 +28,15 @@ public class HunterUnit : MonoBehaviour
 
     private void Awake()
     {
+        target = GameObject.Find("PlayerHolder").transform;
+        
+        
         lineOfSight = GetComponent<LineOfSight>();
 
 
         thisAmmunition = weaponStatistics.amunition;
 
         thisSpeed = aiStatistics.movementSpeed;
-
-
-        target = GameObject.Find("PlayerHolder").transform;
     }
 
 
