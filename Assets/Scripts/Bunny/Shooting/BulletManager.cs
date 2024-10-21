@@ -57,6 +57,14 @@ public class BulletManager : MonoBehaviour
             // Destroys the bullet after impact.
             Destroy(gameObject);
         }
+
+
+        // Checks if the bullet hits something other than the player layer or the Entety Layer.
+        if (collision.gameObject.layer != 6 || collision.gameObject.layer != 8)
+        {
+            // Destroys the bullet after impact.
+            Destroy(gameObject);
+        }
     }
 
 
