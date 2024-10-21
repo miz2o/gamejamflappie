@@ -31,7 +31,7 @@ public class GenerateTerrain : MonoBehaviour
     [SerializeField] GameObject[] trees, objects;
 
     Color[] colours;
-    Vector3[] vertices;
+   public  Vector3[] vertices;
 
     public void CallInAwake()
     {

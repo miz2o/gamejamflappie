@@ -4,27 +4,22 @@ using UnityEngine;
 
 public class ObjectCheck : MonoBehaviour
 {
-   /* RaycastHit hit;
-    private int groundLayer;
-
+    RaycastHit hit;
+    Vector3 hitPoint;
     private void Start()
     {
-        groundLayer = LayerMask.NameToLayer("Ground");
-
-
-
-    }
-
-    private void Update()
-    {
-        if(Physics.Raycast(transform.position, -Vector3.up, out hit, 0.1f))
+        hitPoint = new Vector3(0,0.95f,0);
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 10f))
         {
-            if(hit.transform.gameObject.tag != "Jumpable")
-            {
-                Debug.Log("Object is gone");
-                Destroy(this.gameObject);
-            }
+           // hitPoint = hit.point;
+            Debug.Log("GROUNDED");
+            //this.transform.position = hit.point * hitPoint;
         }
-        
-    }*/
+
+       /* else
+        {
+            Debug.Log("Deleting object");
+            Destroy(this.gameObject);
+        }*/
+    }
 }

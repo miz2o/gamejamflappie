@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
     {
         bunnyInput = new BunnyInput();
 
-        jump = new Vector3 (0, 10, 0);
+        jump = new Vector3 (0, 4, 0);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

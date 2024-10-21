@@ -17,10 +17,10 @@ public class Grid : MonoBehaviour
 
     void Awake()
     {
-        //generateTerrain = GameObject.Find("Mesh Generator").GetComponent<GenerateTerrain>();
+        generateTerrain = GameObject.Find("Mesh Generator").GetComponent<GenerateTerrain>();
 
 
-        //generateTerrain.CallInAwake();
+        generateTerrain.CallInAwake();
 
 
         nodeDiameter = nodeRadius * 2;
