@@ -24,6 +24,9 @@ public class AIHealth : MonoBehaviour
     void Start()
     {
         aiHealth = aiStatistics.health;
+
+
+        score = GameObject.Find("GameManager").GetComponent<Score>();
     }
 
 

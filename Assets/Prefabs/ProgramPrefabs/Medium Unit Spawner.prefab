@@ -47,11 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunterSpawner: 0
   civilianSpawner: 0
-  hunterUnit: {fileID: 0}
-  civilianUnits: []
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
   minimalUnitsToSpawn: 3
   maximalUnitsToSpawn: 5
-  spawnRange: 10
+  spawnRange: 5
   overlapSphereRadius: 0.5
   groundLayer:
     serializedVersion: 2

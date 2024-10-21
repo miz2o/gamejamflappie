@@ -51,6 +51,7 @@ public class UnitSpawner : MonoBehaviour
 
     private void HunterUnitSpawner()
     {
+
         int unitsToSpawn = Random.Range(minimalUnitsToSpawn, maximalUnitsToSpawn + 1);
 
 
@@ -87,7 +88,7 @@ public class UnitSpawner : MonoBehaviour
 
     private bool positionIsClear(Vector3 position)
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, overlapSphereRadius);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 0.5f);
 
         foreach (Collider collider in colliders)
         {

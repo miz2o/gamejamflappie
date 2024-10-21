@@ -47,15 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunterSpawner: 0
   civilianSpawner: 0
-  hunterUnit: {fileID: 0}
-  civilianUnits: []
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
   minimalUnitsToSpawn: 1
   maximalUnitsToSpawn: 3
-  spawnRange: 10
+  spawnRange: 3
   overlapSphereRadius: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!135 &-4426723031558244355
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -73,7 +75,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
