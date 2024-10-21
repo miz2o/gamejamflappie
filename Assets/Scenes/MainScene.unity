@@ -414,7 +414,75 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 511c1d509f4312d4a972175d14870f2a, type: 2}
     - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
       propertyPath: heightMultiplier
-      value: 0.15
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.ctime1
+      value: 31534
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.ctime3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key0.b
+      value: 0.032840855
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key0.g
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key0.r
+      value: 0.056004647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key1.b
+      value: 0.09601278
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key1.g
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key1.r
+      value: 0.09601278
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key2.b
+      value: 0.04950471
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key2.g
+      value: 0.4943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key2.r
+      value: 0.04010676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key3.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key3.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.key3.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
+      propertyPath: terrainGradient.m_NumColorKeys
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

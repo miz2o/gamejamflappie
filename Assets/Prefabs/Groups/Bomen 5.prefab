@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6826683080460821903}
   - component: {fileID: 5277196594637577183}
   - component: {fileID: 7336157188064567347}
+  - component: {fileID: 6639751700982086849}
+  - component: {fileID: 4475104185480943878}
   m_Layer: 0
   m_Name: BoomChop1
   m_TagString: Untagged
@@ -83,6 +85,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6639751700982086849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48851916034319873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4475104185480943878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48851916034319873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15.33, y: 2.2, z: 2}
+  m_Center: {x: -6.13, y: 1.39, z: 0.13}
 --- !u!1 &2333227318058165970
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +130,7 @@ GameObject:
   - component: {fileID: 6683845530120837604}
   - component: {fileID: 4661274171537719727}
   - component: {fileID: 5329458047120099704}
+  - component: {fileID: 8802511751274796743}
   m_Layer: 0
   m_Name: Steen1
   m_TagString: Untagged
@@ -186,8 +222,20 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5018826
-  m_Center: {x: 0.26457596, y: 0.88, z: -0.26732725}
+  m_Radius: 1.26
+  m_Center: {x: 0.26457596, y: 1.27, z: -0.26732725}
+--- !u!114 &8802511751274796743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333227318058165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2952938340003516997
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +248,7 @@ GameObject:
   - component: {fileID: 7597937814896047102}
   - component: {fileID: 6180225873617120828}
   - component: {fileID: 8634324846431156404}
+  - component: {fileID: 683772797431976065}
   m_Layer: 0
   m_Name: Boom1
   m_TagString: Untagged
@@ -295,6 +344,18 @@ CapsuleCollider:
   m_Height: 4.550997
   m_Direction: 1
   m_Center: {x: 0.011703491, y: 2.2754984, z: -0.047598183}
+--- !u!114 &683772797431976065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952938340003516997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3377824839802791233
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +368,7 @@ GameObject:
   - component: {fileID: 2647896469199014836}
   - component: {fileID: 6259433652573402630}
   - component: {fileID: 7034410544613170034}
+  - component: {fileID: 6125905872729405043}
   m_Layer: 0
   m_Name: Steen2-moss
   m_TagString: Untagged
@@ -400,6 +462,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2682517, y: 1.3795078, z: 1.1732044}
   m_Center: {x: -0.025954366, y: 0.6891744, z: -0.011553764}
+--- !u!114 &6125905872729405043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3377824839802791233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5608862910316845421
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +526,8 @@ GameObject:
   - component: {fileID: 6155437469370824087}
   - component: {fileID: 2606160490374157117}
   - component: {fileID: 4700392874515821911}
+  - component: {fileID: 693694484103041366}
+  - component: {fileID: 1933115533740891705}
   m_Layer: 0
   m_Name: klSteen3-moss
   m_TagString: Untagged
@@ -524,6 +600,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &693694484103041366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694145670387806368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1933115533740891705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694145670387806368}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.44, y: 1.2189233, z: 0.86}
+  m_Center: {x: 0.12, y: 0.64, z: -0.05513668}
 --- !u!1 &7951917409706397412
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +645,7 @@ GameObject:
   - component: {fileID: 8937359285162687968}
   - component: {fileID: 6374421202770870865}
   - component: {fileID: 5522508219890663870}
+  - component: {fileID: 7319848971786013415}
   m_Layer: 0
   m_Name: Boom4
   m_TagString: Untagged
@@ -630,7 +740,19 @@ CapsuleCollider:
   m_Radius: 0.67
   m_Height: 9.25
   m_Direction: 1
-  m_Center: {x: 0.05, y: 4.1, z: -0.16}
+  m_Center: {x: 0.05, y: 4.56, z: -0.16}
+--- !u!114 &7319848971786013415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951917409706397412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8357532253290343040
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +765,7 @@ GameObject:
   - component: {fileID: 8830116234653209493}
   - component: {fileID: 5553229007371128553}
   - component: {fileID: 619684960307797005}
+  - component: {fileID: 1897847968045347809}
   m_Layer: 0
   m_Name: Boom3
   m_TagString: Untagged
@@ -738,6 +861,18 @@ CapsuleCollider:
   m_Height: 13.06
   m_Direction: 1
   m_Center: {x: -0.13661695, y: 6.39, z: 0.06187558}
+--- !u!114 &1897847968045347809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357532253290343040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fac3abb032869744a94fef84ca4cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1742958845053750885
 PrefabInstance:
   m_ObjectHideFlags: 0
