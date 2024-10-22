@@ -58,7 +58,7 @@ public class Score : MonoBehaviour
 
     public void AddPoints(int pointsEarned)
     {
-        points = +pointsEarned;
+        points = + pointsEarned;
         pointUi.text = points.ToString();
         if (points > highScore)
         {

@@ -51,7 +51,7 @@ public class AIHealth : MonoBehaviour
         }
     }
 
-    /// Die is called everytime an AI dies.
+    /// Die is called everytime a Unit dies.
     private void Die()
     {
         // Adds the amount of points the enemy gave to the player to the players point tally.
