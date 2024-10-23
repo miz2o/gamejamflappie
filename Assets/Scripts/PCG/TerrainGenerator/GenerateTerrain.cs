@@ -65,7 +65,7 @@ public class GenerateTerrain : MonoBehaviour
 
         UpdateMesh();
 
-        material.SetTexture("TerrainMaterial", gradientTexture);
+        material.SetTexture("TexturedTerrainMaterial", gradientTexture);
 
         material.SetFloat("minTerrainHeight", minTerrainHeight);
         material.SetFloat("maxTerrainHeight", maxTerrainHeight);

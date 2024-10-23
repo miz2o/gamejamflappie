@@ -18,6 +18,9 @@ public class CivilianUnit : MonoBehaviour
 
     private float thisSpeed;
 
+    [Header("Animations")]
+    public Animator civillianAnimator;
+
     private void Awake()
     {
         lineOfSight = GetComponent<LineOfSight>();
@@ -36,6 +39,7 @@ public class CivilianUnit : MonoBehaviour
             // Calculate the direction away from the target object
             Vector3 directionAway = (transform.position - targetObject.position).normalized;
 
+            civillianAnimator.SetTrigger("Run");
             // Move the object in the opposite direction from the target
             transform.position += directionAway * thisSpeed * Time.deltaTime;
         }

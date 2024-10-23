@@ -13,8 +13,6 @@ public class BulletManager : MonoBehaviour
 
     private Vector3 startPosition;
     private float distanceTraveled;
-
-
     /// this void is called before the first frame.
     private void Start()
     {
@@ -52,7 +50,6 @@ public class BulletManager : MonoBehaviour
         {
             // Gets the component "AIHealth" script from the object it has collided with after witch it executes the void take damage.
             collision.gameObject.GetComponent<AIHealth>().TakeDamage(weaponStatistics.damage);
-
 
             // Destroys the bullet after impact.
             Destroy(gameObject);

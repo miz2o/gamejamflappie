@@ -240,7 +240,7 @@ MonoBehaviour:
   rb: {fileID: 798422710117832112}
   camHolder: {fileID: 5772253712144945496}
   jumpForce: 10
-  sensitivity: 0.4
+  sensitivity: 0.2
   moveSpeed: 0.8
   sprintspeed: 1
   currentSpeed: 0.8

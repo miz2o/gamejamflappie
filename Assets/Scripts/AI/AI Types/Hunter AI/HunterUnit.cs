@@ -25,6 +25,8 @@ public class HunterUnit : MonoBehaviour
     private float thisSpeed;
     private int thisAmmunition;
 
+    [Header("Animation")]
+    public Animator hunterAnimator;
 
     private void Awake()
     {

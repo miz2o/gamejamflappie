@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6070799548483818406}
   - component: {fileID: 7359723268702058315}
   - component: {fileID: 7979516696082803130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mesh Generator
   m_TagString: Jumpable
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 511c1d509f4312d4a972175d14870f2a, type: 2}
+  - {fileID: 2100000, guid: a0f189e0705b66944b4d1dbff11eec6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,24 +102,24 @@ MonoBehaviour:
   xOffset: 0
   zOffset: 0
   noiseScale: 0.06
-  heightMultiplier: 0.2
+  heightMultiplier: 0.22
   octaves: 3
   lacunarity: 2
   persistance: 1.15
   terrainGradient:
     serializedVersion: 2
-    key0: {r: 0.021338519, g: 0.25734532, b: 0.4188679, a: 1}
-    key1: {r: 0.1415093, g: 0.93906426, b: 1, a: 1}
-    key2: {r: 0.056004647, g: 0.7735849, b: 0.032840855, a: 0}
-    key3: {r: 0.18747593, g: 0.7584905, b: 0.19953962, a: 0}
+    key0: {r: 0.056004647, g: 0.7735849, b: 0.032840855, a: 1}
+    key1: {r: 0.09601278, g: 0.5849056, b: 0.09601278, a: 1}
+    key2: {r: 0.04010676, g: 0.4943396, b: 0.04950471, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 8558
-    ctime2: 17502
-    ctime3: 43099
+    ctime1: 31534
+    ctime2: 65535
+    ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -134,9 +134,9 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 4
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  material: {fileID: 2100000, guid: 511c1d509f4312d4a972175d14870f2a, type: 2}
+  material: {fileID: 2100000, guid: a0f189e0705b66944b4d1dbff11eec6a, type: 2}
   trees:
   - {fileID: 5279247715109364543, guid: 0177f11a1f83e7446a89f2a443a8adf6, type: 3}
   - {fileID: 4974806041165194683, guid: f39e78ee650a88041b22c530e85f4fa9, type: 3}
@@ -157,13 +157,10 @@ MonoBehaviour:
   - {fileID: 3954903819212784087, guid: 6ad4bd833ab435c4ba8a1aabf1b57350, type: 3}
   - {fileID: 3157029112029549001, guid: 8d21b9e7f8152b84baa5c4f542c2e33a, type: 3}
   - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
-  - {fileID: 3954903819212784087, guid: 6ad4bd833ab435c4ba8a1aabf1b57350, type: 3}
-  - {fileID: 3594978650402042866, guid: a7b6e7f96eebfc04a8ae71a9840869e7, type: 3}
-  - {fileID: 4196457445015561261, guid: e400626d4d94f9740b7941779cad583a, type: 3}
   - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
-  - {fileID: 5279247715109364543, guid: 0177f11a1f83e7446a89f2a443a8adf6, type: 3}
   - {fileID: 3764959523454503745, guid: f959b48287cd85845bd037112a3ccdb0, type: 3}
   - {fileID: 3464333008910666049, guid: b0fc70fed0058d24ab1345e053ba9fa6, type: 3}
+  vertices: []
 --- !u!64 &7979516696082803130
 MeshCollider:
   m_ObjectHideFlags: 0

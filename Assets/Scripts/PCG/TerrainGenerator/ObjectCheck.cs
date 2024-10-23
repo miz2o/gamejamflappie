@@ -9,7 +9,7 @@ public class ObjectCheck : MonoBehaviour
     RaycastHit hit;
     private void Start()
     {
-        Invoke("MoveObjects", 2);
+        Invoke("MoveObjects", 1);
     }
 
     void MoveObjects()
@@ -21,7 +21,6 @@ public class ObjectCheck : MonoBehaviour
         {
             float distanceToMoveDown = Vector3.Distance(lowestPoint, hit.point);
             gameObject.transform.position -= Vector3.up * distanceToMoveDown;
-            Debug.Log("meeep");
         }
     }
 }
