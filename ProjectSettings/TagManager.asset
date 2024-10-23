@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Jumpable
   - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
