@@ -43,5 +43,9 @@ public class CivilianUnit : MonoBehaviour
             // Move the object in the opposite direction from the target
             transform.position += directionAway * thisSpeed * Time.deltaTime;
         }
+        else
+        {
+            civillianAnimator.SetTrigger("Idle");
+        }
     }
 }

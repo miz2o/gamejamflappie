@@ -29,9 +29,9 @@ public class GenerateTerrain : MonoBehaviour
     private Texture2D gradientTexture;
 
     [SerializeField] GameObject[] trees, objects;
-
+    [SerializeField] GameObject grass;
     Color[] colours;
-   public  Vector3[] vertices;
+    Vector3[] vertices;
 
     public void CallInAwake()
     {
@@ -106,7 +106,7 @@ public class GenerateTerrain : MonoBehaviour
                     if (Random.Range(0, 2) == 1)
                     {
                         GameObject treesToSpawn = trees[Random.Range(0, trees.Length)];
-                        var spawnAboveTerrain = noiseHeight;
+                        var spawnAboveTerrain = noiseHeight * 1.5f;
                         
                         Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0,360), 0)));
                         
@@ -114,10 +114,15 @@ public class GenerateTerrain : MonoBehaviour
                     else if(Random.Range(0, 4) == 1)
                     {
                         GameObject objectsToSpawn = objects[Random.Range(0, objects.Length)];
-                        var spawnAboveTerrain = noiseHeight;
+                        var spawnAboveTerrain = noiseHeight * 1.5f;
                         Instantiate(objectsToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)));
                     }
+                   
+                    var spawnGrassAboveTerrain = noiseHeight * 1.5f;
 
+                    Instantiate(grass, new Vector3(mesh.vertices[i].x * meshScale, spawnGrassAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)));
+
+                    
                 }
             }
 

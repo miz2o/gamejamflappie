@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
   - {fileID: 3764959523454503745, guid: f959b48287cd85845bd037112a3ccdb0, type: 3}
   - {fileID: 3464333008910666049, guid: b0fc70fed0058d24ab1345e053ba9fa6, type: 3}
-  vertices: []
+  grass: {fileID: 596565705550979693, guid: 56e64fc61aa20bb4381b1f03e53112cb, type: 3}
 --- !u!64 &7979516696082803130
 MeshCollider:
   m_ObjectHideFlags: 0
