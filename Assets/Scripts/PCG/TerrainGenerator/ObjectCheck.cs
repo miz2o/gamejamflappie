@@ -22,7 +22,11 @@ public class ObjectCheck : MonoBehaviour
         {
             float distanceToMoveDown = Vector3.Distance(lowestPoint, hit.point);
             gameObject.transform.position -= Vector3.up * distanceToMoveDown;
-        }
 
+            if (hit.collider.CompareTag("Wall"))
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
