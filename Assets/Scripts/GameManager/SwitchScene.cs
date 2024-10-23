@@ -5,26 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    public GameObject highscoreMenu;
-
-    bool highscoreMenuOn;
     public void ClickButton(string sceneToLoad)
     {
         SceneManager.LoadScene(sceneToLoad);
     }
-
-    public void TurnMenuO()
+    public void MenuDisable(GameObject menuToDisable)
     {
-        if (highscoreMenuOn)
-        {
-            highscoreMenu.SetActive(false);
-            highscoreMenuOn = false;
-        }
-        else
-        {
-            highscoreMenuOn = true;
-            highscoreMenu.SetActive(true);
-        }
+        menuToDisable.SetActive(false);
+    }
+
+    public void MenuEnable(GameObject menuToEnable)
+    {
+        menuToEnable.SetActive(true);
     }
 
     public void Quitgame()
