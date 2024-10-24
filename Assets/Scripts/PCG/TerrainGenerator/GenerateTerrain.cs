@@ -103,7 +103,7 @@ public class GenerateTerrain : MonoBehaviour
             {
                 if(noiseHeight > 0)
                 {
-                    if (Random.Range(0, 2) == 1)
+                    if (Random.Range(0, 4) == 1)
                     {
                         GameObject treesToSpawn = trees[Random.Range(0, trees.Length)];
                         var spawnAboveTerrain = noiseHeight * 1.5f;
@@ -111,7 +111,7 @@ public class GenerateTerrain : MonoBehaviour
                         Instantiate(treesToSpawn, new Vector3(mesh.vertices[i].x * meshScale, spawnAboveTerrain, mesh.vertices[i].z * meshScale), Quaternion.Euler(new Vector3(0, Random.Range(0,360), 0)));
                         
                     }
-                    else if(Random.Range(0, 4) == 1)
+                    else if(Random.Range(0, 3) == 1)
                     {
                         GameObject objectsToSpawn = objects[Random.Range(0, objects.Length)];
                         var spawnAboveTerrain = noiseHeight * 1.5f;

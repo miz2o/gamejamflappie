@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public float gameTimer;
     public string timerFormatted;
     public static float  highScore;
-    public int points;
+    public static int points;
 
     public TextMeshProUGUI timer, pointUi, timeUpPoints;
     public GameObject timeUpScreen;
@@ -56,9 +56,9 @@ public class Score : MonoBehaviour
     }
 
 
-    public void AddPoints(int pointsEarned)
+    public void AddPoints()
     {
-        points =+ pointsEarned;
+       // points =+ pointsEarned;
         pointUi.text = points.ToString();
         if (points > highScore)
         {

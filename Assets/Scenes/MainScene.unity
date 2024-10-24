@@ -311,7 +311,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 921882302}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: ClickButton
         m_Mode: 5
@@ -556,7 +556,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_margin: {x: -1.2742138, y: 4.722702, z: 14.5021515, w: 4.097746}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &251929817
@@ -766,58 +766,6 @@ PrefabInstance:
     - target: {fileID: 5814333884370240882, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: octaves
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: lacunarity
-      value: 1.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: noiseScale
-      value: 0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: heightMultiplier
-      value: 0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key0.b
-      value: 0.14731936
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key0.g
-      value: 0.21509439
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key0.r
-      value: 0.14947094
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key1.b
-      value: 0.11856881
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key1.g
-      value: 0.14716971
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key1.r
-      value: 0.11856881
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key2.b
-      value: 0.29965058
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key2.g
-      value: 0.3433962
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359723268702058315, guid: 53c12ce625af5d4498efb06f64a8b50d, type: 3}
-      propertyPath: terrainGradient.key2.r
-      value: 0.1418939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2038,15 +1986,15 @@ PrefabInstance:
     - target: {fileID: 3114104033414423302, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3114104033414423302, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3114104033414423302, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3114104033414423302, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MenuEnable
@@ -2058,6 +2006,18 @@ PrefabInstance:
     - target: {fileID: 3114104033414423302, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: MenuDisable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584741722734699083, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584741722734699083, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584741722734699083, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2078,19 +2038,19 @@ PrefabInstance:
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3637327465129988026, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -2154,15 +2114,15 @@ PrefabInstance:
     - target: {fileID: 4339343492269757365, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 4339343492269757365, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 4339343492269757365, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 4339343492269757365, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MenuEnable
@@ -2182,15 +2142,15 @@ PrefabInstance:
     - target: {fileID: 7977228028087382632, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 7977228028087382632, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 7977228028087382632, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 921882305}
+      objectReference: {fileID: 0}
     - target: {fileID: 7977228028087382632, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MenuEnable
@@ -2202,6 +2162,14 @@ PrefabInstance:
     - target: {fileID: 7977228028087382632, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: MenuDisable
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119249830349071004, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119249830349071004, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2267,7 +2235,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2331,7 +2299,7 @@ MonoBehaviour:
   m_margin: {x: 53.64193, y: 4.722702, z: 14.5021515, w: 4.097746}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &613606487
@@ -2559,7 +2527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 921882302}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: ClickButton
         m_Mode: 5
@@ -3900,7 +3868,6 @@ GameObject:
   - component: {fileID: 921882304}
   - component: {fileID: 921882302}
   - component: {fileID: 921882303}
-  - component: {fileID: 921882305}
   - component: {fileID: 921882308}
   - component: {fileID: 921882307}
   - component: {fileID: 921882306}
@@ -3923,6 +3890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290c61882ffb62143a52b6f789a5c653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensitivitySlider: {fileID: 0}
 --- !u!114 &921882303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3937,10 +3905,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTimer: 120
   timerFormatted: 
-  points: 0
   timer: {fileID: 1019023379}
   pointUi: {fileID: 1784383774}
-  timeUpPoints: {fileID: 894440410}
+  timeUpPoints: {fileID: 251929816}
   timeUpScreen: {fileID: 1475398282}
   timerOn: 0
 --- !u!4 &921882304
@@ -3958,18 +3925,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &921882305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921882301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 290c61882ffb62143a52b6f789a5c653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &921882306
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4446,7 +4401,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 921882302}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: ClickButton
         m_Mode: 5
@@ -4455,7 +4410,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: MainMenuScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &931843367
@@ -5733,7 +5688,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 921882302}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: ClickButton
         m_Mode: 5
@@ -5742,7 +5697,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: MainMenuScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1200899109
@@ -6602,7 +6557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 921882305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: MenuDisable
         m_Mode: 2
@@ -6614,7 +6569,7 @@ MonoBehaviour:
           m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 921882305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: MenuDisable
         m_Mode: 2
@@ -6626,7 +6581,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 921882305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: MenuDisable
         m_Mode: 2
@@ -7214,7 +7169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 921882305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: ClickButton
         m_Mode: 5
@@ -7347,7 +7302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 921882305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: Quitgame
         m_Mode: 1

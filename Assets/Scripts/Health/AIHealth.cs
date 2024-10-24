@@ -18,7 +18,7 @@ public class AIHealth : MonoBehaviour
 
 
     public float aiHealth;
-
+    bool isDead;
     [Header("Particles")]
 
     [SerializeField] ParticleSystem impactParticle ,deathParticle;
@@ -48,7 +48,7 @@ public class AIHealth : MonoBehaviour
         impactParticle.Play();
 
         // Checks if the "AIHealth" float is under 1.
-        if (aiHealth < 1)
+        if (aiHealth < 1 && !isDead)
         {
             // Executes void DIe.
             StartCoroutine("Die");
@@ -58,10 +58,12 @@ public class AIHealth : MonoBehaviour
     /// Die is called everytime a Unit dies.
     private IEnumerator Die()
     {
+        isDead = true;
         deathParticle.Play();
+        Score.points += aiStatistics.points;
         // Adds the amount of points the enemy gave to the player to the players point tally.
-        score.AddPoints(aiStatistics.points);
-        yield return new WaitForSeconds(2);
+        //score.AddPoints(aiStatistics.points);
+        yield return new WaitForSeconds(1);
         // Destroyes the gameobejct this script is on.
         Destroy(gameObject);
     }

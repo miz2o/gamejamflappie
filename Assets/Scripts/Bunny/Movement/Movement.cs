@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
         Cursor.visible = false;
 
         currentSpeed = moveSpeed;
-       
+        sensitivity = PlayerPrefs.GetFloat("sensitivity");
     }
 
     private void OnEnable()

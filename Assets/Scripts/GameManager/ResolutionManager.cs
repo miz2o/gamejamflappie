@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResolutionManager : MonoBehaviour
 {
     public TMP_Dropdown ResolutionDropdown;
-    //public Toggle FullscreenToggle;
+    public Toggle FullscreenToggle;
 
+    
     Resolution[] AllResolutions;
     int SelectedResolution;
     bool IsFullscreen;
@@ -41,9 +43,9 @@ public class ResolutionManager : MonoBehaviour
         Screen.SetResolution(SelectedResoltionList[SelectedResolution].width, SelectedResoltionList[SelectedResolution].height, IsFullscreen);
     }
 
-    /*public void ChangeFullscreen()
+    public void ChangeFullscreen()
     {
         IsFullscreen = FullscreenToggle.isOn;
         Screen.SetResolution(SelectedResoltionList[SelectedResolution].width, SelectedResoltionList[SelectedResolution].height, IsFullscreen);
-    }*/
+    }
 }

@@ -101,16 +101,16 @@ MonoBehaviour:
   height: 10
   xOffset: 0
   zOffset: 0
-  noiseScale: 0.06
-  heightMultiplier: 0.22
+  noiseScale: 0.19
+  heightMultiplier: 0.47
   octaves: 3
-  lacunarity: 2
+  lacunarity: 1.12
   persistance: 1.15
   terrainGradient:
     serializedVersion: 2
-    key0: {r: 0.056004647, g: 0.7735849, b: 0.032840855, a: 1}
-    key1: {r: 0.09601278, g: 0.5849056, b: 0.09601278, a: 1}
-    key2: {r: 0.04010676, g: 0.4943396, b: 0.04950471, a: 0}
+    key0: {r: 0.14947094, g: 0.21509439, b: 0.14731936, a: 1}
+    key1: {r: 0.11856881, g: 0.14716971, b: 0.11856881, a: 1}
+    key2: {r: 0.1418939, g: 0.3433962, b: 0.29965058, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -149,6 +149,7 @@ MonoBehaviour:
   - {fileID: 7076987804872749609, guid: d649180745f717a4f924910a93aab9f3, type: 3}
   - {fileID: 3594978650402042866, guid: a7b6e7f96eebfc04a8ae71a9840869e7, type: 3}
   - {fileID: 4974806041165194683, guid: f39e78ee650a88041b22c530e85f4fa9, type: 3}
+  - {fileID: 3368005598312433243, guid: 25ae0cd7f56e6a64fa7767735878a887, type: 3}
   objects:
   - {fileID: 3405715662550202766, guid: 7f0c25856aa93b54e8bdc70fc829946d, type: 3}
   - {fileID: 5612450083528394905, guid: d82ab0f006a7dfb46a4a7828c118806f, type: 3}
@@ -156,10 +157,18 @@ MonoBehaviour:
   - {fileID: 5020437146114271042, guid: 99add72a26d5435438d8c6cb07abf5f4, type: 3}
   - {fileID: 3954903819212784087, guid: 6ad4bd833ab435c4ba8a1aabf1b57350, type: 3}
   - {fileID: 3157029112029549001, guid: 8d21b9e7f8152b84baa5c4f542c2e33a, type: 3}
-  - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
+  - {fileID: 8665359871246719765, guid: d406047574a7b884b81875e5795fd14b, type: 3}
   - {fileID: 3361356136886734576, guid: 490fbf64d90db564b98082461c3b791e, type: 3}
   - {fileID: 3764959523454503745, guid: f959b48287cd85845bd037112a3ccdb0, type: 3}
   - {fileID: 3464333008910666049, guid: b0fc70fed0058d24ab1345e053ba9fa6, type: 3}
+  - {fileID: 2471626036122714319, guid: 1efe41fc426e6b9468b5bc90e58812d7, type: 3}
+  - {fileID: 8871068331791207056, guid: f8a69c99f80bd704381ed12ed4799cc2, type: 3}
+  - {fileID: 6015846750027331669, guid: 96ff181ad42c42e4ba380a6db7514fef, type: 3}
+  - {fileID: 1260480570387451013, guid: e78efba50c90ee84ab717a98f0981b2b, type: 3}
+  - {fileID: 3866517672490023303, guid: 5208f214844aa8242850602c73f72d92, type: 3}
+  - {fileID: 6058304101329023823, guid: 4ccc4447a55c99842a17eef781b989a0, type: 3}
+  - {fileID: 419838735507487688, guid: c9bc0e939b21c404abb91ec76b8a166c, type: 3}
+  - {fileID: 5718851999217299146, guid: 0302affc2c328144a90ebbb3bffb2477, type: 3}
   grass: {fileID: 596565705550979693, guid: 56e64fc61aa20bb4381b1f03e53112cb, type: 3}
 --- !u!64 &7979516696082803130
 MeshCollider:

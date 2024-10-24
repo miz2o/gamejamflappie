@@ -89,10 +89,9 @@ public class PlayerHealth : MonoBehaviour
     {
         // shows the player the death screen.
         deathPanel.SetActive(true);
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         // Makes it so that the amount opf points scored are shown on the win screen.
-        pointsEarned.text = ("Your score:" + score.points);
+        pointsEarned.text = ("Your score:" + Score.points);
     }
 }
