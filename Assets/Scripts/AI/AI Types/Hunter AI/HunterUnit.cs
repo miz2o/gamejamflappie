@@ -25,8 +25,18 @@ public class HunterUnit : MonoBehaviour
     private float thisSpeed;
     private int thisAmmunition;
 
+
     [Header("Animation")]
-    public Animator hunterAnimator;
+    
+    [SerializeField] private Animator hunterAnimator;
+
+
+    [Header("Audio")]
+
+    [SerializeField] private AudioSource walkAudioSource;
+
+    //[SerializeField] private AudioClip walkAudioClip;
+
 
     private void Awake()
     {
@@ -74,13 +84,13 @@ public class HunterUnit : MonoBehaviour
             ShootAtPlayer();
         }
 
+
         else if (lineOfSight.playerIsViseble == true && hunterWeaponManager.canShoot == true && thisAmmunition <= 0)
         {
             StartCoroutine(hunterWeaponManager.ReloadProces());
         }
     }
    
-
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
     {
@@ -92,6 +102,9 @@ public class HunterUnit : MonoBehaviour
             StopCoroutine("FollowPath");
 
             StartCoroutine("FollowPath");
+
+
+            walkAudioSource.Play();
         }
     }
 

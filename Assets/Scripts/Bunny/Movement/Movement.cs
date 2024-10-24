@@ -28,6 +28,8 @@ public class Movement : MonoBehaviour
 
     RaycastHit hit;
 
+    public AudioSource walkAudio;
+
     private void Awake()
     {
         bunnyInput = new BunnyInput();
@@ -96,6 +98,13 @@ public class Movement : MonoBehaviour
         //animations
        
         animator.SetFloat("Speed", currentSpeed);
+
+        //audio
+
+        if (isGrounded)
+        {
+           walkAudio.Play();
+        }
     }
 
     private Vector3 GetCameraForward(Camera cam)
