@@ -69,6 +69,8 @@ public class HunterUnit : MonoBehaviour
             if (Vector3.Distance(transform.position, target.position) > 0f)
             {
                 UpdatePath(); // Update the path if the target has moved
+
+                hunterAnimator.SetTrigger("Walk");
             }
         }
 
@@ -76,6 +78,7 @@ public class HunterUnit : MonoBehaviour
         if (lineOfSight.playerIsViseble == false)
         {
             StopCoroutine("FollowPath");
+            hunterAnimator.SetTrigger("Idle");
         }
 
 
@@ -164,7 +167,7 @@ public class HunterUnit : MonoBehaviour
     private void ShootAtPlayer()
     {
         hunterWeaponManager.Shoot();
-
+        hunterAnimator.SetTrigger("Shoot");
 
         if (thisAmmunition < 1)
         {

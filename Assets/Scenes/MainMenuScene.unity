@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResolutionDropdown: {fileID: 1188249087}
-  FullscreenToggle: {fileID: 0}
+  FullscreenToggle: {fileID: 6560846462622045614}
 --- !u!1 &3613650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5151,6 +5151,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1151619}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1151620}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFullscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResolutionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4958389355591048795, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
@@ -5188,6 +5216,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+--- !u!114 &6560846462622045614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4848622198804252185, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
+  m_PrefabInstance: {fileID: 6560846462622045613}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

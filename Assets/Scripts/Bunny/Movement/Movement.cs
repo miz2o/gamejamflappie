@@ -41,6 +41,11 @@ public class Movement : MonoBehaviour
 
         currentSpeed = moveSpeed;
         sensitivity = PlayerPrefs.GetFloat("sensitivity");
+
+        if (sensitivity < 0.02f) 
+        {
+            sensitivity = 0.4f;
+        }
     }
 
     private void OnEnable()
