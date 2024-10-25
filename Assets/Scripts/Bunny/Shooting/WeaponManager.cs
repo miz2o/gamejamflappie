@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 /// this script 
 public class WeaponManager : MonoBehaviour
 {
+    [Header("Weapon Information")]
     public WeaponStatistics weaponStatistics;
     public Transform weaponTransform;
 
@@ -19,7 +20,14 @@ public class WeaponManager : MonoBehaviour
     public bool canShoot = true;
 
 
-    public Animator animator;
+    [Header("änimations")]
+
+    [SerializeField] private Animator animator;
+
+
+    [Header("Sounds")]
+
+    [SerializeField] private AudioSource gunShotSound;
 
 
     /// This function is called when the script instance is being loaded
@@ -86,6 +94,9 @@ public class WeaponManager : MonoBehaviour
         {
             StartCoroutine(ReloadProces());
         }
+
+
+        gunShotSound.Play();
 
 
         canShoot = false;

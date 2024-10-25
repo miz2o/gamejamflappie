@@ -3988,16 +3988,16 @@ AudioSource:
   m_GameObject: {fileID: 921882301}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6159127570240633405, guid: fab41ef9499a37449b898d79ee073903, type: 2}
   m_audioClip: {fileID: 8300000, guid: 056555179260f7143891c9ae9979dc2e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4084,7 +4084,7 @@ AudioSource:
   m_GameObject: {fileID: 921882301}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2333837063825649504, guid: fab41ef9499a37449b898d79ee073903, type: 2}
   m_audioClip: {fileID: 8300000, guid: db1ed84ff0c7e0349a9eb487bb34c378, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4093,7 +4093,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4180,10 +4180,10 @@ AudioSource:
   m_GameObject: {fileID: 921882301}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2333837063825649504, guid: fab41ef9499a37449b898d79ee073903, type: 2}
   m_audioClip: {fileID: 8300000, guid: d862a6f2fd321a44685fcf719f1a7d50, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.075
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6823,6 +6823,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 626505040117157050, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -7559,7 +7563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.46}
   m_AnchorMin: {x: 0.20500001, y: 0.785}
   m_AnchorMax: {x: 0.8135419, y: 0.92800003}
-  m_AnchoredPosition: {x: -10.832214, y: -156.7741}
+  m_AnchoredPosition: {x: -10.832275, y: -156.7741}
   m_SizeDelta: {x: 457.37982, y: 119.60818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706124268

@@ -137,6 +137,9 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   material: {fileID: 2100000, guid: a0f189e0705b66944b4d1dbff11eec6a, type: 2}
+  treeHolder: {fileID: 0}
+  objectHolder: {fileID: 0}
+  grassHolder: {fileID: 0}
   trees:
   - {fileID: 5279247715109364543, guid: 0177f11a1f83e7446a89f2a443a8adf6, type: 3}
   - {fileID: 4974806041165194683, guid: f39e78ee650a88041b22c530e85f4fa9, type: 3}
@@ -169,6 +172,12 @@ MonoBehaviour:
   - {fileID: 6058304101329023823, guid: 4ccc4447a55c99842a17eef781b989a0, type: 3}
   - {fileID: 419838735507487688, guid: c9bc0e939b21c404abb91ec76b8a166c, type: 3}
   - {fileID: 5718851999217299146, guid: 0302affc2c328144a90ebbb3bffb2477, type: 3}
+  - {fileID: 5020437146114271042, guid: 99add72a26d5435438d8c6cb07abf5f4, type: 3}
+  - {fileID: 5020437146114271042, guid: 99add72a26d5435438d8c6cb07abf5f4, type: 3}
+  - {fileID: 7511423096170569432, guid: ddb964fd963f01d4f876ec1d054b3e61, type: 3}
+  - {fileID: 7511423096170569432, guid: ddb964fd963f01d4f876ec1d054b3e61, type: 3}
+  - {fileID: 419838735507487688, guid: c9bc0e939b21c404abb91ec76b8a166c, type: 3}
+  - {fileID: 419838735507487688, guid: c9bc0e939b21c404abb91ec76b8a166c, type: 3}
   grass: {fileID: 596565705550979693, guid: 56e64fc61aa20bb4381b1f03e53112cb, type: 3}
 --- !u!64 &7979516696082803130
 MeshCollider:
