@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb3658371d68b947a5d748d5cfb215e, type: 3}
   m_Name: HunterStatistics
   m_EditorClassIdentifier: 
-  health: 100
+  health: 40
   movementSpeed: 1
   rotationSpeed: 100
   points: 3

@@ -34,8 +34,7 @@ public class HunterUnit : MonoBehaviour
     [Header("Audio")]
 
     [SerializeField] private AudioSource walkAudioSource;
-
-    //[SerializeField] private AudioClip walkAudioClip;
+    [SerializeField] private AudioSource ShootAudio;
 
 
     private void Awake()
@@ -178,6 +177,9 @@ public class HunterUnit : MonoBehaviour
 
             StartCoroutine(hunterWeaponManager.ReloadProces());
         }
+
+
+        ShootAudio.Play();
 
     }
 
