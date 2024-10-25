@@ -80,6 +80,15 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""82a10cc3-77fd-48b5-90fa-e8fdfa0d4c1e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9eed6ec7-4989-4b0b-9e78-94d6864e480b"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         m_Bunny_Shoot = m_Bunny.FindAction("Shoot", throwIfNotFound: true);
         m_Bunny_Mouse = m_Bunny.FindAction("Mouse", throwIfNotFound: true);
         m_Bunny_Reload = m_Bunny.FindAction("Reload", throwIfNotFound: true);
+        m_Bunny_Pause = m_Bunny.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,6 +294,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Bunny_Shoot;
     private readonly InputAction m_Bunny_Mouse;
     private readonly InputAction m_Bunny_Reload;
+    private readonly InputAction m_Bunny_Pause;
     public struct BunnyActions
     {
         private @BunnyInput m_Wrapper;
@@ -283,6 +305,7 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Bunny_Shoot;
         public InputAction @Mouse => m_Wrapper.m_Bunny_Mouse;
         public InputAction @Reload => m_Wrapper.m_Bunny_Reload;
+        public InputAction @Pause => m_Wrapper.m_Bunny_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Bunny; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +333,9 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IBunnyActions instance)
@@ -332,6 +358,9 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IBunnyActions instance)
@@ -357,5 +386,6 @@ public partial class @BunnyInput: IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
