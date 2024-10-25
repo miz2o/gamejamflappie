@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hunterSpawner: 0
-  civilianSpawner: 0
+  civilianSpawner: 1
   hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
   civilianUnits:
   - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
