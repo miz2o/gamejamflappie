@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivitySlider: {fileID: 248977955}
+  highscoreText: {fileID: 903266956}
+  highscorePoint: 0
 --- !u!114 &1151620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4037,7 +4039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Procedural Terain Generation -Doutzen Hoekstra
+  m_text: Procedural Terrain Generation -Doutzen Hoekstra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77b1063375aad73499d37d380dc978cd, type: 2}
   m_sharedMaterial: {fileID: -796139261635334086, guid: 77b1063375aad73499d37d380dc978cd, type: 2}

@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
     public float gameTimer;
     public string timerFormatted;
-    public static float  highScore;
+    public static int  highScore;
     public static int points;
 
     public TextMeshProUGUI timer, pointUi, timeUpPoints;
@@ -39,7 +39,7 @@ public class Score : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
 
-                timeUpPoints.text = ("Your score:" + points);
+                timeUpPoints.text = points.ToString();
                 //time over screen with points
                 //do things
             }
@@ -70,6 +70,6 @@ public class Score : MonoBehaviour
     {
         //set new highscore whoooo
         highScore = points;
-        PlayerPrefs.SetFloat("highScore", highScore);
+        PlayerPrefs.SetInt("highScore", highScore);
     }
 }

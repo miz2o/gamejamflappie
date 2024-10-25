@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,6 +8,15 @@ using UnityEngine.UI;
 public class SwitchScene : MonoBehaviour
 {
     public Slider sensitivitySlider;
+
+    public TextMeshProUGUI highscoreText;
+    public int highscorePoint;
+    private void Start()
+    {
+        highscorePoint = PlayerPrefs.GetInt("highScore");
+
+        highscoreText.text = highscorePoint.ToString();
+    }
     public void ClickButton(string sceneToLoad)
     {
         SceneManager.LoadScene(sceneToLoad);
