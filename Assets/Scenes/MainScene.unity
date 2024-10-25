@@ -3925,6 +3925,7 @@ GameObject:
   - component: {fileID: 921882307}
   - component: {fileID: 921882306}
   - component: {fileID: 921882309}
+  - component: {fileID: 921882310}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4281,6 +4282,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuPanel: {fileID: 493039302}
   settingsPanel: {fileID: 1491289269}
+--- !u!114 &921882310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921882301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5948b438193b54794be2348dd72a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentObjectiveText: {fileID: 897919130}
+  objectiveText: {fileID: 1706124268}
+  fadeOutSpeed: 0.3
 --- !u!1 &927168055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,14 +6839,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 626505040117157050, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 921882303}
+    - target: {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: deathPanel
+      value: 
+      objectReference: {fileID: 516680874}
+    - target: {fileID: 1023655490283571154, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
+      propertyPath: pointsEarned
+      value: 
+      objectReference: {fileID: 251929816}
     - target: {fileID: 2041325552538610422, guid: 6e8d8104bb39fb5408b74bdbefd928f6, type: 3}
       propertyPath: m_Controller
       value: 
