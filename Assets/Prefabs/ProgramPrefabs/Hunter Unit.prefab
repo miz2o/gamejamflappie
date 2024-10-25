@@ -2563,7 +2563,7 @@ MonoBehaviour:
   hunterWeaponManager: {fileID: 5783214353622434258}
   aiStatistics: {fileID: 11400000, guid: 6143f05bacfd15b48ad1fa98426d85ef, type: 2}
   weaponStatistics: {fileID: 11400000, guid: 0403dd90facda284bb963af1cacfe648, type: 2}
-  hunterAnimator: {fileID: 0}
+  hunterAnimator: {fileID: 3478822063656666088}
   walkAudioSource: {fileID: 2274085827752966620}
 --- !u!114 &280614769269977016
 MonoBehaviour:
@@ -2664,7 +2664,7 @@ Animator:
   m_GameObject: {fileID: 1031276453731665639}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99961ca47d37d0d4fb92cd4135da4a8e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

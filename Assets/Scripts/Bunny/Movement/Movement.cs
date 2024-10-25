@@ -103,6 +103,11 @@ public class Movement : MonoBehaviour
         //animations
        
         animator.SetFloat("Speed", currentSpeed);
+        if(currentSpeed == 0)
+        {
+            animator.SetTrigger("Idle");
+            //animator.SetFloat("Speed", currentSpeed);
+        }
 
         //audio
 

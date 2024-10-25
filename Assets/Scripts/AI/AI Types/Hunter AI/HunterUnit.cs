@@ -49,6 +49,8 @@ public class HunterUnit : MonoBehaviour
         thisAmmunition = weaponStatistics.amunition;
 
         thisSpeed = aiStatistics.movementSpeed;
+
+        hunterAnimator.SetTrigger("Idle");
     }
 
 

@@ -72,7 +72,7 @@ public class WeaponManager : MonoBehaviour
 
     public void Shoot()
     {
-        animator.SetTrigger("shoot");
+        animator.Play("shoot");
 
 
         GameObject bullet = Instantiate(weaponStatistics.bulletProjectile, weaponTransform.position, weaponTransform.rotation);

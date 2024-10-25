@@ -27,7 +27,7 @@ public class CivilianUnit : MonoBehaviour
 
 
         thisSpeed = aiStatistics.movementSpeed;
-
+        civillianAnimator.SetTrigger("Idle");
 
         targetObject = GameObject.Find("PlayerHolder").transform;
     }
