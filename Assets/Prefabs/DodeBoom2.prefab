@@ -132,6 +132,6 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.56
-  m_Height: 6.06
+  m_Height: 9.383649
   m_Direction: 1
-  m_Center: {x: 0.04, y: 3.2, z: 0}
+  m_Center: {x: 0.04000002, y: 4.8618245, z: 0}
