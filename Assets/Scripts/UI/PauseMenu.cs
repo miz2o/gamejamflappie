@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         bunnyInput = new BunnyInput();
-
+        Time.timeScale = 1;
         inMenu = false;
     }
 

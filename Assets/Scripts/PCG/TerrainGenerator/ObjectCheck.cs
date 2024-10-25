@@ -10,7 +10,7 @@ public class ObjectCheck : MonoBehaviour
 
     private void Start()
     {
-        Invoke("MoveObjects", 0.5f);
+        Invoke("MoveObjects", 0.2f);
     }
 
     void MoveObjects()
