@@ -47,5 +47,13 @@ public class ResolutionManager : MonoBehaviour
     {
         IsFullscreen = FullscreenToggle.isOn;
         Screen.SetResolution(SelectedResoltionList[SelectedResolution].width, SelectedResoltionList[SelectedResolution].height, IsFullscreen);
+        if (!IsFullscreen)
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
+        else
+        {
+            Screen.fullScreen = Screen.fullScreen;
+        }
     }
 }
