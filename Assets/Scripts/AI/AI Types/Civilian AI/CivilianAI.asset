@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CivilianAI
   m_EditorClassIdentifier: 
   health: 20
-  movementSpeed: 1
+  movementSpeed: 3
   rotationSpeed: 100
   points: 1
