@@ -61,6 +61,7 @@ public class AIHealth : MonoBehaviour
         isDead = true;
         deathParticle.Play();
         Score.points += aiStatistics.points;
+        score.AddPoints();
         // Adds the amount of points the enemy gave to the player to the players point tally.
         //score.AddPoints(aiStatistics.points);
         yield return new WaitForSeconds(1);

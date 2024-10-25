@@ -92,6 +92,7 @@ public class PlayerHealth : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         // Makes it so that the amount opf points scored are shown on the win screen.
-        pointsEarned.text = Score.points.ToString();
+       // pointsEarned.text = Score.points.ToString();
+        pointsEarned.text = ("" + Score.points).ToString();
     }
 }

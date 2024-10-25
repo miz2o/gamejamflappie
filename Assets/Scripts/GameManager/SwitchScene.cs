@@ -13,9 +13,18 @@ public class SwitchScene : MonoBehaviour
     public int highscorePoint;
     private void Start()
     {
-        highscorePoint = PlayerPrefs.GetInt("highScore");
+        highscorePoint = PlayerPrefs.GetInt("highscore");
 
         highscoreText.text = highscorePoint.ToString();
+        Debug.Log(highscorePoint);
+    }
+
+    public void HighscoreButton()
+    {
+        highscorePoint = PlayerPrefs.GetInt("highscore");
+
+        highscoreText.text = highscorePoint.ToString();
+        Debug.Log(highscorePoint);
     }
     public void ClickButton(string sceneToLoad)
     {
