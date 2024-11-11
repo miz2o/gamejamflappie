@@ -279,12 +279,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62400695}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 104, y: 25, z: 119.8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.868088, y: -116.1689, z: -63.17697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 362560998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &62400698
 BoxCollider:
@@ -440,6 +440,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63385074}
   m_CullTransparentMesh: 1
+--- !u!1 &129470616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129470617}
+  - component: {fileID: 129470619}
+  - component: {fileID: 129470618}
+  m_Layer: 10
+  m_Name: Citizens (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129470617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129470616}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 58.3, y: -116.1689, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &129470618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129470616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &129470619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129470616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 0
+  civilianSpawner: 1
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &219409616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1087,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264372285}
   m_CullTransparentMesh: 1
+--- !u!1 &299494340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299494341}
+  - component: {fileID: 299494343}
+  - component: {fileID: 299494342}
+  m_Layer: 10
+  m_Name: Citizens (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &299494341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299494340}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -43.1, y: -116.1689, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &299494342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299494340}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &299494343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299494340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 0
+  civilianSpawner: 1
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &303725118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1480,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7911401914616397732, guid: 9aceb0b16dce0c6408e3cc9803a16389, type: 3}
   m_PrefabInstance: {fileID: 354826300}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &362560997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362560998}
+  m_Layer: 0
+  m_Name: EnemyHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362560998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362560997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 163.43192, y: 141.1689, z: 214.57697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1136642574}
+  - {fileID: 502065014}
+  - {fileID: 1754924712}
+  - {fileID: 1402105630}
+  - {fileID: 62400697}
+  - {fileID: 655695120}
+  - {fileID: 299494341}
+  - {fileID: 129470617}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406747692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +2097,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493039302}
   m_CullTransparentMesh: 1
+--- !u!1 &502065011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502065014}
+  - component: {fileID: 502065013}
+  - component: {fileID: 502065012}
+  m_Layer: 10
+  m_Name: Hunters (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &502065012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502065011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &502065013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502065011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 1
+  civilianSpawner: 0
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!4 &502065014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502065011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -111.431915, y: -116.1689, z: -140.07697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516680874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,6 +2729,85 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 652884413653494187, guid: ad86f0b60c27edf4993d479e4e565817, type: 3}
   m_PrefabInstance: {fileID: 481576616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &655695119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655695120}
+  - component: {fileID: 655695122}
+  - component: {fileID: 655695121}
+  m_Layer: 10
+  m_Name: Citizens
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &655695120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655695119}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.868088, y: -116.1689, z: -63.17697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &655695121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655695119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &655695122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655695119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 0
+  civilianSpawner: 1
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &661523527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5624,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124419482}
   m_CullTransparentMesh: 1
+--- !u!1 &1136642571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1136642574}
+  - component: {fileID: 1136642573}
+  - component: {fileID: 1136642572}
+  m_Layer: 10
+  m_Name: Hunters (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1136642572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136642571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1136642573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136642571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 1
+  civilianSpawner: 0
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!4 &1136642574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136642571}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -111.431915, y: -116.1689, z: -38.776962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157907737
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,6 +6736,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395709766}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1402105629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402105630}
+  - component: {fileID: 1402105632}
+  - component: {fileID: 1402105631}
+  m_Layer: 10
+  m_Name: Hunters (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402105630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402105629}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -111.431915, y: -116.1689, z: 50.02304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1402105631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402105629}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1402105632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402105629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 1
+  civilianSpawner: 0
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &1411041655
 GameObject:
   m_ObjectHideFlags: 0
@@ -7860,6 +8373,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1352826977}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1754924711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754924712}
+  - component: {fileID: 1754924714}
+  - component: {fileID: 1754924713}
+  m_Layer: 10
+  m_Name: Hunters (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1754924712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754924711}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -111.431915, y: -116.1689, z: -140.07697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362560998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1754924713
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754924711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1754924714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754924711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dfbf29a3cb54d4a937f1eb51fca3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunterSpawner: 1
+  civilianSpawner: 0
+  hunterUnit: {fileID: 1031276453731665639, guid: 285fce7c96fbe7b448066e34a2239da1, type: 3}
+  civilianUnits:
+  - {fileID: 790560890296383284, guid: 357728ba35b31f446bbf60d7bf7cb0c9, type: 3}
+  - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
+  minimalUnitsToSpawn: 150
+  maximalUnitsToSpawn: 200
+  spawnRange: 200
+  overlapSphereRadius: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &1762703880 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3070566243034775306, guid: ea32e7e9d2f919d4e8ba0f47af8dd94b, type: 3}
@@ -11769,4 +12361,4 @@ SceneRoots:
   - {fileID: 481576616}
   - {fileID: 1870520656}
   - {fileID: 2022121441}
-  - {fileID: 62400697}
+  - {fileID: 362560998}
