@@ -50,7 +50,10 @@ public class UnitSpawner : MonoBehaviour
 
             if (positionIsClear(randomPosition))
             {
-                Instantiate(hunterUnit, randomPosition, Quaternion.identity);
+                // Generate a random Y rotation
+                Quaternion randomRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+
+                Instantiate(hunterUnit, randomPosition, randomRotation);
             }
         }
     }
@@ -69,7 +72,10 @@ public class UnitSpawner : MonoBehaviour
 
             if (positionIsClear(randomPosition))
             {
-                Instantiate(civilianUnits[Random.Range(0, civilianUnits.Length)], randomPosition, Quaternion.identity);
+                // Generate a random Y rotation
+                Quaternion randomRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+
+                Instantiate(civilianUnits[Random.Range(0, civilianUnits.Length)], randomPosition, randomRotation);
             }
         }
     }

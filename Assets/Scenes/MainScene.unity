@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 62400696}
   - component: {fileID: 62400698}
   m_Layer: 10
-  m_Name: Units
+  m_Name: Hunters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,8 +266,8 @@ MonoBehaviour:
   - {fileID: 297146906348237041, guid: 24a77ce29f62da841a048f52b3595e17, type: 3}
   minimalUnitsToSpawn: 150
   maximalUnitsToSpawn: 200
-  spawnRange: 10
-  overlapSphereRadius: 10
+  spawnRange: 200
+  overlapSphereRadius: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 2048

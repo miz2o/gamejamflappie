@@ -41,6 +41,13 @@ public class HunterUnit : MonoBehaviour
         UpdatePath();
     }
 
+    private void OnDestroy()
+    {
+        StopAllCoroutines(); // Stop all coroutines if the object is destroyed
+        if (walkAudioSource.isPlaying) walkAudioSource.Stop();
+        if (ShootAudio.isPlaying) ShootAudio.Stop();
+    }
+
     void Update()
     {
         if (target == null) return;
@@ -72,18 +79,18 @@ public class HunterUnit : MonoBehaviour
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
     {
-        if (pathSuccessful && lineOfSight.playerIsViseble)
-        {
-            path = newPath;
-            StopCoroutine("FollowPath");
-            StartCoroutine("FollowPath");
-            if (!walkAudioSource.isPlaying) walkAudioSource.Play();
-        }
+        if (this == null || !pathSuccessful || lineOfSight == null || !lineOfSight.playerIsViseble) return;
+
+        path = newPath;
+        StopCoroutine("FollowPath");
+        StartCoroutine("FollowPath");
+        if (!walkAudioSource.isPlaying) walkAudioSource.Play();
     }
 
     IEnumerator FollowPath()
     {
-        if (path == null) yield break;
+        if (path == null || target == null || this == null) yield break;
+
         if (targetIndex < path.Length)
         {
             Vector3 currentWaypoint = path[targetIndex];
@@ -105,10 +112,10 @@ public class HunterUnit : MonoBehaviour
         }
     }
 
-
-
     private void LookAtPlayer()
     {
+        if (target == null) return;
+
         Vector3 directionToTarget = target.position - transform.position;
         directionToTarget.y = 0;
 
