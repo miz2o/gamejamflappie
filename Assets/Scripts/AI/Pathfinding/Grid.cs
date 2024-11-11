@@ -13,14 +13,11 @@ public class Grid : MonoBehaviour
     int gridSizeX, gridSizeY;
 
 
-    private GenerateTerrain generateTerrain;
+  
 
     void Awake()
     {
-        generateTerrain = GameObject.Find("Mesh Generator").GetComponent<GenerateTerrain>();
-
-
-        generateTerrain.CallInAwake();
+       
 
 
         nodeDiameter = nodeRadius * 2;
